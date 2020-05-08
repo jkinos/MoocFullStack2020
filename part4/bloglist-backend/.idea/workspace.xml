@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac53c2d2-5fb0-4a4a-886c-b92b4569aa29" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aWhK3X29DJe4hmwmZQeAsOxBhs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phonebook_back" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\academy\moocFullStack\blogilista\tests" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3001/api/users" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3001/api/blogs" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3001/api/users" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3001/api/blogs" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="GET http://localhost:3001/api/users&#10;Accept: */*&#10;Cache-Control: no-cache" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3001" />
+          <option name="urlPath" value="/api/blogs" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://httpbin.org/ip" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:3001/api/users" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Jest.when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added ">
+    <configuration name="when there is initially one user at db" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="when there is initially one user at db" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="when there is initially one user at db.login fails with wrong username" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="when there is initially one user at db" />
+        <test-name value="login fails with wrong username" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="when there is initially one user at db.login succeeds with an existing username" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="when there is initially one user at db" />
+        <test-name value="login succeeds with an existing username" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
+      <test-names>
+        <test-name value="when there is initially one user at db" />
+        <test-name value="when there is initially some blogs saved" />
+        <test-name value="addition of a new blog" />
+        <test-name value="a valid blog can be added " />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " />
+        <item itemvalue="Jest.when there is initially one user at db" />
+        <item itemvalue="Jest.when there is initially one user at db.login succeeds with an existing username" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Jest.when there is initially one user at db.login fails with wrong username" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac53c2d2-5fb0-4a4a-886c-b92b4569aa29" name="Default Changelist" comment="" />
+      <created>1586857190364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586857190364</updated>
+      <workItem from="1586857193563" duration="64419000" />
+      <workItem from="1587239726146" duration="102868000" />
+      <workItem from="1587659903110" duration="179000" />
+      <workItem from="1587660101789" duration="4734000" />
+      <workItem from="1587732800062" duration="1801000" />
+      <workItem from="1587746670346" duration="36715000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586974315271">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="90" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1586974315271" />
+    <state x="93" y="93" width="1350" height="678" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587407563855">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.864@0.0.1536.864" timestamp="1587407563855" />
+    <state x="620" y="324" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587594049874">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="620" y="324" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864" timestamp="1587594049874" />
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1587779347604">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1587779347604" />
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1588946162243">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588946162243" />
+    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1588946162241">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588946162241" />
+    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1588946162241">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588946162241" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1588946162242">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588946162242" />
+    <state width="1493" height="268" key="GridCell.Tab.1.bottom" timestamp="1587659802288">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587659802288" />
+    <state width="1493" height="268" key="GridCell.Tab.1.center" timestamp="1587659802287">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1587659802287" />
+    <state width="1493" height="268" key="GridCell.Tab.1.left" timestamp="1587659802287">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1587659802287" />
+    <state width="1493" height="268" key="GridCell.Tab.1.right" timestamp="1587659802288">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1587659802288" />
+    <state width="1493" height="268" key="GridCell.Tab.2.bottom" timestamp="1587659802288">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587659802288" />
+    <state width="1493" height="268" key="GridCell.Tab.2.center" timestamp="1587659802288">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1587659802288" />
+    <state width="1493" height="268" key="GridCell.Tab.2.left" timestamp="1587659802288">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1587659802288" />
+    <state width="1493" height="268" key="GridCell.Tab.2.right" timestamp="1587659802288">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1587659802288" />
+    <state width="1493" height="268" key="GridCell.Tab.3.bottom" timestamp="1587631296327">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587631296327" />
+    <state width="1493" height="268" key="GridCell.Tab.3.center" timestamp="1587631296327">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1587631296327" />
+    <state width="1493" height="268" key="GridCell.Tab.3.left" timestamp="1587631296327">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1587631296327" />
+    <state width="1493" height="268" key="GridCell.Tab.3.right" timestamp="1587631296327">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="268" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1587631296327" />
+    <state x="249" y="9" key="SettingsEditor" timestamp="1587594813155">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="249" y="9" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1587594813155" />
+    <state x="477" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1586857194607">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="477" y="259" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586857194607" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587652250863">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587652250863" />
+  </component>
+</project>
