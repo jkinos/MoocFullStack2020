@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac53c2d2-5fb0-4a4a-886c-b92b4569aa29" name="Default Changelist" comment="" />
+    <list default="true" id="ac53c2d2-5fb0-4a4a-886c-b92b4569aa29" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/components/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/components/Togglable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/components/Togglable.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +25,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1aWhK3X29DJe4hmwmZQeAsOxBhs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,7 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../phonebook_back" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -167,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added ">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="when there is initially one user at db" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -178,20 +191,6 @@
       <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
       <test-names>
         <test-name value="when there is initially one user at db" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="when there is initially one user at db.login fails with wrong username" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
-      <test-names>
-        <test-name value="when there is initially one user at db" />
-        <test-name value="login fails with wrong username" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -225,6 +224,16 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -237,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="Jest.when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " />
         <item itemvalue="Jest.when there is initially one user at db" />
         <item itemvalue="Jest.when there is initially one user at db.login succeeds with an existing username" />
         <item itemvalue="npm.test" />
-        <item itemvalue="Jest.when there is initially one user at db.login fails with wrong username" />
       </list>
     </recent_temporary>
   </component>
@@ -273,6 +282,7 @@
       <workItem from="1587660101789" duration="4734000" />
       <workItem from="1587732800062" duration="1801000" />
       <workItem from="1587746670346" duration="36715000" />
+      <workItem from="1589022529653" duration="467000" />
     </task>
     <servers />
   </component>

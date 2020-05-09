@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ebc2705-5bcd-4f1d-a8d1-3df24d15cf08" name="Default Changelist" comment="" />
+    <list default="true" id="0ebc2705-5bcd-4f1d-a8d1-3df24d15cf08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Togglable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Togglable.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +24,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1awv1xhv6pBOL63uWeBaEytFSeu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,9 +36,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../loppuprojekti/AcademyFinalProjectFront" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../part4/bloglist-backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,6 +95,7 @@
       <workItem from="1587659261651" duration="19725000" />
       <workItem from="1587732800190" duration="5443000" />
       <workItem from="1587746669195" duration="51158000" />
+      <workItem from="1589021785191" duration="1340000" />
     </task>
     <servers />
   </component>
@@ -87,10 +103,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1588678492502">
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1589022525426">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1588678492502" />
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589022525426" />
     <state width="1493" height="28" key="GridCell.Tab.0.bottom" timestamp="1588946297620">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ffa6fcd-d5a9-4fb0-9fe4-2728d8f1d66f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Filter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notification.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Person.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PersonForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Persons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Persons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phonebook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/phonebook_front.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
-    </list>
+    <list default="true" id="7ffa6fcd-d5a9-4fb0-9fe4-2728d8f1d66f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,9 +19,10 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1YWtxDfK98WB2BgELFr6MwXF6dX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -55,7 +33,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../part5/bloglist-frontend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -165,6 +143,7 @@
       <workItem from="1588952989855" duration="968000" />
       <workItem from="1588955051195" duration="960000" />
       <workItem from="1588958596062" duration="575000" />
+      <workItem from="1589021763401" duration="18000" />
     </task>
     <servers />
   </component>
@@ -180,10 +159,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1583085351585" />
-    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1588956687883">
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1589021778816">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1588956687883" />
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589021778816" />
     <state width="1493" height="217" key="GridCell.Tab.0.bottom" timestamp="1588959170596">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -200,10 +179,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="217" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588959170596" />
-    <state x="477" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1588953026771">
+    <state x="477" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1589021767031">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="477" y="259" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1588953026771" />
+    <state x="477" y="259" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1589021767031" />
     <state x="209" y="159" width="1118" height="558" key="new project wizard" timestamp="1583479773403">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

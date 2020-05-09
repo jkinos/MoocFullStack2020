@@ -36,9 +36,10 @@ const App = () => {
         }
     }, [])
 
-    const handleLogin = async (credentials) => {
+    const handleLogin = async (event) => {
+        event.preventDefault()
         try {
-            const user = await loginService.login(credentials)
+            const user = await loginService.login({username,password})
             window.localStorage.setItem(
                 'loggedBlogAppUser', JSON.stringify(user)
             )
