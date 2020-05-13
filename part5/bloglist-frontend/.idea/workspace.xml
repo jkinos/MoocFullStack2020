@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ebc2705-5bcd-4f1d-a8d1-3df24d15cf08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/BlogForm.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BlogForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlogForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +54,34 @@
       <recent name="C:\academy\moocFullStack\bloglist-frontend\src\components" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.renders only title and author">
-    <configuration name="renders only title and author" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.&lt;BlogForm /&gt; updates parent state and calls onSubmit">
+    <configuration name="&lt;BlogForm /&gt; updates parent state and calls onSubmit" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/BlogForm.test.js" />
+      <test-names>
+        <test-name value="&lt;BlogForm /&gt; updates parent state and calls onSubmit" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;Blog/&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/Blog.test.js" />
+      <test-names>
+        <test-name value="&lt;Blog/&gt;" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="&lt;Blog/&gt;.after clicking the button, url, likes and user are displayed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
@@ -59,35 +90,46 @@
       <scope-kind value="TEST" />
       <test-file value="$PROJECT_DIR$/src/components/Blog.test.js" />
       <test-names>
-        <test-name value="renders only title and author" />
+        <test-name value="&lt;Blog/&gt;" />
+        <test-name value="after clicking the button, url, likes and user are displayed" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="eslint" />
-      </scripts>
+    <configuration name="&lt;Blog/&gt;.blog details can be closed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Blog.test.js" />
+      <test-names>
+        <test-name value="&lt;Blog/&gt;" />
+        <test-name value="blog details can be closed" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
+    <configuration name="&lt;Blog/&gt;.clicking the like button calls event handler once" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Blog.test.js" />
+      <test-names>
+        <test-name value="&lt;Blog/&gt;" />
+        <test-name value="clicking the like button calls event handler once" />
+      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.renders only title and author" />
-        <item itemvalue="npm.eslint" />
-        <item itemvalue="npm.start" />
+        <item itemvalue="Jest.&lt;BlogForm /&gt; updates parent state and calls onSubmit" />
+        <item itemvalue="Jest.&lt;Blog/&gt;.clicking the like button calls event handler once" />
+        <item itemvalue="Jest.&lt;Blog/&gt;" />
+        <item itemvalue="Jest.&lt;Blog/&gt;.blog details can be closed" />
+        <item itemvalue="Jest.&lt;Blog/&gt;.after clicking the button, url, likes and user are displayed" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +158,7 @@
       <workItem from="1587659261651" duration="19725000" />
       <workItem from="1587732800190" duration="5443000" />
       <workItem from="1587746669195" duration="51158000" />
-      <workItem from="1589021785191" duration="16773000" />
+      <workItem from="1589021785191" duration="25902000" />
     </task>
     <servers />
   </component>
@@ -124,26 +166,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="678" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589375114905">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.864@0.0.1536.864" timestamp="1589375114905" />
     <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1589022525426">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589022525426" />
-    <state width="1493" height="342" key="GridCell.Tab.0.bottom" timestamp="1589357999556">
+    <state width="1493" height="342" key="GridCell.Tab.0.bottom" timestamp="1589375211205">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589357999556" />
-    <state width="1493" height="342" key="GridCell.Tab.0.center" timestamp="1589357999555">
+    <state width="1493" height="342" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589375211205" />
+    <state width="1493" height="342" key="GridCell.Tab.0.center" timestamp="1589375211205">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589357999555" />
-    <state width="1493" height="342" key="GridCell.Tab.0.left" timestamp="1589357999555">
+    <state width="1493" height="342" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589375211205" />
+    <state width="1493" height="342" key="GridCell.Tab.0.left" timestamp="1589375211205">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589357999555" />
-    <state width="1493" height="342" key="GridCell.Tab.0.right" timestamp="1589357999556">
+    <state width="1493" height="342" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589375211205" />
+    <state width="1493" height="342" key="GridCell.Tab.0.right" timestamp="1589375211205">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589357999556" />
+    <state width="1493" height="342" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589375211205" />
     <state x="349" y="178" key="IDE.errors.dialog" timestamp="1589364045001">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
