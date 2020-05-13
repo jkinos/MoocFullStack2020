@@ -111,21 +111,14 @@ const App = () => {
         )
     }
 
-    const like = async (event) => {
-        event.preventDefault()
-        const blogObject = {
-            title: blog.title,
-            author: blog.author,
-            url: blog.url,
-            likes: likes + 1,
-            user: blog.user.id || blog.user
-        }
+    const likeBlog = async (id,blogObject,setLikes) => {
         try {
-            const response = await blogService.update(blog.id,blogObject)
-            setLikes (response.likes)
+            const response = await blogService.update(id,blogObject)
+            setLikes(response.likes)
         }catch (e) { console.log(e.message)
         }
     }
+
 
     return (
         <div>
@@ -142,7 +135,8 @@ const App = () => {
                           user={ user }
                           blogs={ blogs }
                           setBlogs={ setBlogs }
-                          like={ like }/>
+                          like={ likeBlog }
+                    />
                           ) }
         </div>
     )

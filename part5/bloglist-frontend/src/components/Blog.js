@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import blogService from '../services/blogs'
 
-const Blog = ({ blog,user, blogs, setBlogs, like }) => {
+const Blog = ({ blog,user, blogs, setBlogs, like,}) => {
+    const [likes, setLikes] = useState(blog.likes)
     const [showBlogDetails, setShowBlogDetails] = useState(false)
     const [buttonLabel, setButtonLabel] = useState('view')
-    const [likes, setLikes] = useState(blog.likes)
     const showOrHide = { display: showBlogDetails ? '' : 'none' }
     const showForOwnerOnly = { display: user.id === (blog.user.id || blog.user) ? '' : 'none', backgroundColor: 'blue' }
 
@@ -17,6 +17,20 @@ const Blog = ({ blog,user, blogs, setBlogs, like }) => {
             setButtonLabel('hide')
         }
     }
+
+    const likeBlog = (event) => {
+        event.preventDefault()
+        const blogObject = {
+            title: blog.title,
+            author: blog.author,
+            url: blog.url,
+            likes: likes + 1,
+            user: blog.user.id || blog.user
+        }
+        const id = blog.id
+        like(id, blogObject,setLikes)
+    }
+
 
     const removeBlog = async (event) => {
         event.preventDefault()
@@ -46,7 +60,7 @@ const Blog = ({ blog,user, blogs, setBlogs, like }) => {
             <div>{blog.title} {blog.author} <button onClick={toggleView}>{buttonLabel}</button></div>
             <div style= {showOrHide} className='showOrHide'>
                 <div>{blog.url}</div>
-                <div>Likes {likes} <button onClick={like}>like</button></div>
+                <div>Likes {likes} <button onClick={likeBlog}>like</button></div>
                 <div>{blog.user.username}</div>
                 <button style={showForOwnerOnly} onClick={removeBlog}>remove</button>
             </div>
