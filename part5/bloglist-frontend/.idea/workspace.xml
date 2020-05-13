@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ebc2705-5bcd-4f1d-a8d1-3df24d15cf08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Blog.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BlogForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlogForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Notification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Togglable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Togglable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/blogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +54,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -53,7 +62,30 @@
       <recent name="C:\academy\moocFullStack\bloglist-frontend\src\components" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jest.renders only title and author">
+    <configuration name="renders only title and author" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/components/Blog.test.js" />
+      <test-names>
+        <test-name value="renders only title and author" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eslint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -66,6 +98,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.renders only title and author" />
+        <item itemvalue="npm.eslint" />
         <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
@@ -95,7 +129,7 @@
       <workItem from="1587659261651" duration="19725000" />
       <workItem from="1587732800190" duration="5443000" />
       <workItem from="1587746669195" duration="51158000" />
-      <workItem from="1589021785191" duration="1340000" />
+      <workItem from="1589021785191" duration="15781000" />
     </task>
     <servers />
   </component>
@@ -107,25 +141,37 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589022525426" />
-    <state width="1493" height="28" key="GridCell.Tab.0.bottom" timestamp="1588946297620">
+    <state width="1493" height="342" key="GridCell.Tab.0.bottom" timestamp="1589357999556">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="28" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588946297620" />
-    <state width="1493" height="28" key="GridCell.Tab.0.center" timestamp="1588946297619">
+    <state width="1493" height="342" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589357999556" />
+    <state width="1493" height="342" key="GridCell.Tab.0.center" timestamp="1589357999555">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="28" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588946297619" />
-    <state width="1493" height="28" key="GridCell.Tab.0.left" timestamp="1588946297619">
+    <state width="1493" height="342" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589357999555" />
+    <state width="1493" height="342" key="GridCell.Tab.0.left" timestamp="1589357999555">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="28" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588946297619" />
-    <state width="1493" height="28" key="GridCell.Tab.0.right" timestamp="1588946297619">
+    <state width="1493" height="342" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589357999555" />
+    <state width="1493" height="342" key="GridCell.Tab.0.right" timestamp="1589357999556">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="28" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588946297619" />
+    <state width="1493" height="342" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589357999556" />
+    <state x="349" y="178" key="IDE.errors.dialog" timestamp="1589364045001">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="349" y="178" key="IDE.errors.dialog/0.0.1536.864@0.0.1536.864" timestamp="1589364045001" />
+    <state x="279" y="77" key="SettingsEditor" timestamp="1589029185307">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="279" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1589029185307" />
     <state x="477" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1587753824132">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="477" y="259" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1587753824132" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1589023592399">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1589023592399" />
   </component>
 </project>

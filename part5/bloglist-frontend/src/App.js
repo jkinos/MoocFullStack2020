@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Blog from './components/Blog'
 import blogService from './services/blogs'
-import loginService from "./services/login";
-import LoginForm from "./components/LoginForm";
-import BlogForm from "./components/BlogForm"
+import loginService from './services/login'
+import LoginForm from './components/LoginForm'
+import BlogForm from './components/BlogForm'
 import './App.css'
-import Notification from "./components/Notification";
-import Togglable from "./components/Togglable";
+import Notification from './components/Notification'
+import Togglable from './components/Togglable'
 
 const App = () => {
 
@@ -39,7 +39,7 @@ const App = () => {
     const handleLogin = async (event) => {
         event.preventDefault()
         try {
-            const user = await loginService.login({username,password})
+            const user = await loginService.login({ username, password } )
             window.localStorage.setItem(
                 'loggedBlogAppUser', JSON.stringify(user)
             )
@@ -56,6 +56,7 @@ const App = () => {
     }
 
     const handleLogout = (event) => {
+        event.preventDefault()
         window.localStorage.clear()
         setUser(null)
         setUsername('')
@@ -82,48 +83,52 @@ const App = () => {
         return (
             <Togglable buttonLabel='login'>
                 <LoginForm
-                    username={username}
-                    password={password}
-                    handleUsernameChange={({target})=> setUsername(target.value)}
-                    handlePasswordChange={({target})=> setPassword(target.value)}
-                    handleLogin={handleLogin}
+                    username={ username }
+                    password={ password }
+                    handleUsernameChange={ ({ target }) => setUsername(target.value) }
+                    handlePasswordChange={ ({ target }) => setPassword(target.value) }
+                    handleLogin={ handleLogin }
                 />
             </Togglable>
         )
     }
 
     const blogForm = () =>
-        <Togglable buttonLabel='add new blog' ref={blogFormRef}>
-        <BlogForm
-            addBlog={addBlog}
-            user={user}
-        />
+        <Togglable buttonLabel='add new blog' ref={ blogFormRef }>
+            <BlogForm
+                addBlog={ addBlog }
+                user={ user }
+            />
         </Togglable>
-
     if (user===null) {
+        return (
+            <div>
+                <Notification message={ errorMessage } className='error' />
+                <Notification message={ successMessage } className='success' />
+                <h2>Log in to application</h2>
+                { loginForm() }
+            </div>
+        )
+    }
+
     return (
         <div>
-        <Notification message={errorMessage} className='error' />
-        <Notification message={successMessage} className='success' />
-        <h2>Log in to application</h2>
-            {loginForm()}
+            <h1>blogs</h1>
+            <Notification message={ errorMessage } className='error' />
+            <Notification message={ successMessage } className='success' />
+            <div>{ user.username } logged in <button onClick={ handleLogout }>logout</button></div>
+            <h2>create new</h2>
+            { blogForm() }
+            <br/>
+            { blogs.map(blog =>
+                    <Blog key={ blog.id }
+                          blog={ blog }
+                          user={ user }
+                          blogs={ blogs }
+                          setBlogs={ setBlogs }/>
+                          ) }
         </div>
     )
-}
-  return (
-    <div>
-        <h1>blogs</h1>
-        <Notification message={errorMessage} className='error' />
-        <Notification message={successMessage} className='success' />
-        <div>{user.username} logged in <button onClick={handleLogout}>logout</button></div>
-        <h2>create new</h2>
-        {blogForm()}
-    <br/>
-        {blogs.map(blog =>
-                <Blog key={blog.id} blog={blog} user={user} blogs={blogs} setBlogs={setBlogs} />
-            )}
-    </div>
-  )
 }
 
 export default App
