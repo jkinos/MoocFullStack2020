@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import blogService from '../services/blogs'
 
-const Blog = ({ blog,user, blogs, setBlogs, like,}) => {
+const Blog = ({ blog,user, blogs, setBlogs, like, }) => {
     const [likes, setLikes] = useState(blog.likes)
     const [showBlogDetails, setShowBlogDetails] = useState(false)
     const [buttonLabel, setButtonLabel] = useState('view')
@@ -56,13 +56,13 @@ const Blog = ({ blog,user, blogs, setBlogs, like,}) => {
     }
 
     return (
-        <div style={blogStyle}>
-            <div>{blog.title} {blog.author} <button onClick={toggleView}>{buttonLabel}</button></div>
+        <div className='blog' style={blogStyle}>
+            <div>{blog.title} {blog.author} <button id='viewOrHide' onClick={toggleView}>{buttonLabel}</button></div>
             <div style= {showOrHide} className='showOrHide'>
                 <div>{blog.url}</div>
-                <div>Likes {likes} <button onClick={likeBlog}>like</button></div>
+                <div>Likes {likes} <button id='like' onClick={likeBlog}>like</button></div>
                 <div>{blog.user.username}</div>
-                <button style={showForOwnerOnly} onClick={removeBlog}>remove</button>
+                <button id='remove-blog' style={showForOwnerOnly} onClick={removeBlog}>remove</button>
             </div>
         </div>
     )
