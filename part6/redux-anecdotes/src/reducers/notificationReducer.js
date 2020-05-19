@@ -1,16 +1,21 @@
 
-export const setNotification = (notification, time) => {
+let timeoutID
+export const setNotification = (message, time) => {
+    window.clearTimeout(timeoutID);
     return async dispatch => {
         const milliseconds = time * 1000
+        const timeoutSetter = () => {
+            timeoutID = window.setTimeout(() => {
+                dispatch(timeout())
+            }, milliseconds)
+        }
         dispatch({
         type: 'NOTIFICATION',
         data: {
-            notification: notification
+            notification: message,
         }
         })
-        setTimeout(() => {
-            dispatch(timeout())
-        }, milliseconds)
+        timeoutSetter()
     }
 }
 
