@@ -1,21 +1,19 @@
 
-export const voteNotification = anecdote => {
-    return {
-        type: 'VOTE_NOTIFICATION',
+export const setNotification = (notification, time) => {
+    return async dispatch => {
+        const milliseconds = time * 1000
+        dispatch({
+        type: 'NOTIFICATION',
         data: {
-            anecdote: anecdote
+            notification: notification
         }
+        })
+        setTimeout(() => {
+            dispatch(timeout())
+        }, milliseconds)
     }
 }
 
-export const newAnecdoteNotification = anecdote => {
-    return {
-        type: 'NEW_ANECDOTE_NOTIFICATION',
-        data: {
-            anecdote: anecdote
-        }
-    }
-}
 export const timeout = () => {
     return {
         type:'TIMEOUT'
@@ -27,14 +25,8 @@ const notificationReducer = (state = null, action) => {
     console.log('action', action)
 
     switch (action.type) {
-        case 'VOTE_NOTIFICATION':
-            const anecdote = action.data.anecdote
-            console.log('anekdootti',anecdote)
-            return `You voted ${anecdote}`
-
-        case 'NEW_ANECDOTE_NOTIFICATION':
-            const newAnecdote = action.data.anecdote
-            return `Succesfully added ${newAnecdote}`
+        case 'NOTIFICATION':
+            return action.data.notification
         case 'TIMEOUT':
             return null
         default:
