@@ -24,6 +24,7 @@ const App = () => {
 
   const addNew = (anecdote) => {
     anecdote.id = (Math.random() * 10000).toFixed(0)
+    console.log(anecdote)
     setAnecdotes(anecdotes.concat(anecdote))
   }
 
