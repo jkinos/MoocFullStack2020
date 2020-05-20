@@ -4,11 +4,11 @@ import {
     Switch, Route, Link,  useRouteMatch
 } from "react-router-dom"
 
-import AnecdoteList from "./Menu_components/AnecdoteList";
-import CreateNew from "./Menu_components/CreateNew";
-import About from "./Menu_components/About";
-import Footer from "./Menu_components/Footer";
-import Anecdote from "./Menu_components/Anecdote";
+import AnecdoteList from "./AnecdoteList";
+import CreateNew from "./CreateNew";
+import About from "./About";
+import Footer from "./Footer";
+import Anecdote from "./Anecdote";
 
 const Menu = ({addNew, anecdotes ,notification, setNotification}) => {
 
