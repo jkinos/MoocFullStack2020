@@ -46,6 +46,7 @@ const App = () => {
     <div>
       <h1>Software anecdotes</h1>
       <Menu
+          vote={vote}
           addNew={addNew}
           anecdotes={anecdotes}
           notification={notification}

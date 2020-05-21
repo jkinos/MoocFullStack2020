@@ -1,7 +1,6 @@
 import React from "react"
 import {
-    BrowserRouter as Router,
-    Switch, Route, Link,  useRouteMatch
+    Switch, Route, Link, useRouteMatch,
 } from "react-router-dom"
 
 import AnecdoteList from "./AnecdoteList";
@@ -10,7 +9,7 @@ import About from "./About";
 import Footer from "./Footer";
 import Anecdote from "./Anecdote";
 
-const Menu = ({addNew, anecdotes ,notification, setNotification}) => {
+const Menu = ({addNew, anecdotes ,notification, setNotification,vote}) => {
 
     const match = useRouteMatch('/anecdotes/:id')
     const anecdote = match
@@ -21,7 +20,7 @@ const Menu = ({addNew, anecdotes ,notification, setNotification}) => {
         paddingRight: 5
     }
     return (
-        <Router>
+        <div>
             <div>
                 <Link style={padding} to='/'>anecdotes</Link>
                 <Link style={padding} to='/create'>create new</Link>
@@ -43,7 +42,7 @@ const Menu = ({addNew, anecdotes ,notification, setNotification}) => {
                 </Route>
             </Switch>
             <Footer/>
-            </Router>
+            </div>
             )
         }
 export default Menu
