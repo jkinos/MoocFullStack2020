@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ebc2705-5bcd-4f1d-a8d1-3df24d15cf08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/controllers/testing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/integration/examples/blog_app.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part2-3/find_countries/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/find_countries/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/controllers/testing.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/controllers/testing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BlogForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BlogForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoginForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +39,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../part4/bloglist-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,7 +151,12 @@
       <workItem from="1587659261651" duration="19725000" />
       <workItem from="1587732800190" duration="5443000" />
       <workItem from="1587746669195" duration="51158000" />
-      <workItem from="1589021785191" duration="59260000" />
+      <workItem from="1589021785191" duration="61538000" />
+      <workItem from="1589561233893" duration="110000" />
+      <workItem from="1589724546338" duration="621000" />
+      <workItem from="1589742701054" duration="1545000" />
+      <workItem from="1589830112369" duration="1864000" />
+      <workItem from="1589915078152" duration="609000" />
     </task>
     <servers />
   </component>
@@ -170,26 +168,26 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.864@0.0.1536.864" timestamp="1589375114905" />
-    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1589022525426">
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1589893136263">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589022525426" />
-    <state width="1493" height="342" key="GridCell.Tab.0.bottom" timestamp="1589471511086">
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589893136263" />
+    <state width="1493" height="5" key="GridCell.Tab.0.bottom" timestamp="1589548854383">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589471511086" />
-    <state width="1493" height="342" key="GridCell.Tab.0.center" timestamp="1589471511086">
+    <state width="1493" height="5" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589548854383" />
+    <state width="1493" height="5" key="GridCell.Tab.0.center" timestamp="1589548854382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589471511086" />
-    <state width="1493" height="342" key="GridCell.Tab.0.left" timestamp="1589471511085">
+    <state width="1493" height="5" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589548854382" />
+    <state width="1493" height="5" key="GridCell.Tab.0.left" timestamp="1589548854381">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589471511085" />
-    <state width="1493" height="342" key="GridCell.Tab.0.right" timestamp="1589471511086">
+    <state width="1493" height="5" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589548854381" />
+    <state width="1493" height="5" key="GridCell.Tab.0.right" timestamp="1589548854382">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589471511086" />
+    <state width="1493" height="5" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589548854382" />
     <state x="349" y="178" key="IDE.errors.dialog" timestamp="1589364045001">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

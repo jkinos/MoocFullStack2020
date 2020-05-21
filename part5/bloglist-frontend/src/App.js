@@ -6,7 +6,11 @@ import LoginForm from './components/LoginForm'
 import BlogForm from './components/BlogForm'
 import './App.css'
 import Notification from './components/Notification'
+import Error from './components/Error'
 import Togglable from './components/Togglable'
+import { useDispatch } from 'react-redux'
+import {setNotification} from "./reducers/nofificationReducer"
+import {setError} from "./reducers/errorReducer";
 
 const App = () => {
 
@@ -14,9 +18,8 @@ const App = () => {
     const [user, setUser] = useState(null)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [successMessage, setSuccessMessage] = useState(null)
-    const [errorMessage,setErrorMessage] = useState(null)
     const blogFormRef = React.createRef()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         const getBlogs = async () => {
@@ -48,11 +51,7 @@ const App = () => {
             setUsername('')
             setPassword('')
         } catch (exception) {
-            setErrorMessage('wrong password or username')
-            setTimeout(() => {
-                setErrorMessage(null)
-            }, 5000)
-        }
+            dispatch(setError('wrong password or username',5))        }
     }
 
     const handleLogout = (event) => {
@@ -68,15 +67,9 @@ const App = () => {
             blogFormRef.current.toggleVisibility()
             const blog = await blogService.create(newObject)
             setBlogs(blogs.concat(blog))
-            setSuccessMessage(`a new blog ${blog.title} by ${blog.author} succesfully added`)
-            setTimeout(() => {
-                setSuccessMessage(null)
-            },5000)
+            dispatch(setNotification(`a new blog ${blog.title} by ${blog.author} succesfully added`,5))
         } catch (exception) {
-            setErrorMessage(exception.message)
-            setTimeout(() => {
-                setErrorMessage(null)
-            }, 5000)
+            dispatch(setError(exception.message,5))
         }
     }
     const loginForm = () => {
@@ -103,8 +96,8 @@ const App = () => {
     if (user===null) {
         return (
             <div>
-                <Notification message={ errorMessage } className='error' />
-                <Notification message={ successMessage } className='success' />
+                <Notification/>
+                <Error/>
                 <h2>Log in to application</h2>
                 { loginForm() }
             </div>
@@ -123,8 +116,8 @@ const App = () => {
     return (
         <div>
             <h1>blogs</h1>
-            <Notification message={ errorMessage } className='error' />
-            <Notification message={ successMessage } className='success' />
+            <Notification/>
+            <Error/>
             <div>{ user.username } logged in <button onClick={ handleLogout }>logout</button></div>
             <h2>create new</h2>
             { blogForm() }

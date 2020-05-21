@@ -46,9 +46,10 @@ const Blog = ({ blog,user, blogs, setBlogs, like, }) => {
     }
 
     const blogStyle = {
-        paddingTop: 5,
-        paddingBottom: 5,
+        paddingTop: 10,
+        paddingBottom: 15,
         paddingLeft: 15,
+        paddingRight: 15,
         border: 'solid',
         borderWidth: 1,
         marginBottom: 5,
