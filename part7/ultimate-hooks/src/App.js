@@ -27,7 +27,7 @@ const useResource = (baseUrl,resource) => {
 
   const create = async newObject => {
     const response = await axios.post(baseUrl, newObject)
-    setResources(response.data)
+    setResources([response.data])
   }
 
 
@@ -50,8 +50,8 @@ const App = () => {
   console.log('notes',notes)
   console.log('persons',persons)
 
-  useEffect(() => noteService.getAll(),[])
-  useEffect(() => personService.getAll(),[])
+  useEffect(() => noteService.getAll(),[notes])
+  useEffect(() => personService.getAll(),[persons])
 
 
   const handleNoteSubmit = (event) => {

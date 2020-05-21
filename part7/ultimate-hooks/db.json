@@ -13,12 +13,8 @@
       "id": 3
     },
     {
-      "content": "muistiinpano",
+      "content": "mahtavaa, toimii",
       "id": 4
-    },
-    {
-      "content": "uusi",
-      "id": 5
     }
   ],
   "persons": [
@@ -26,6 +22,11 @@
       "name": "mluukkai",
       "number": "040-5483923",
       "id": 1
+    },
+    {
+      "name": "Mie ite",
+      "number": "123456789",
+      "id": 2
     }
   ]
 }
