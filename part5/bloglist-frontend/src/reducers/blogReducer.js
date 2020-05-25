@@ -34,6 +34,20 @@ export const initializeBlogs = () => {
 
 }
 
+export const removeBlog = id => {
+    return async dispatch => {
+        const blogToRemove = await blogService.remove(id)
+        dispatch({
+            type: 'REMOVE_BLOG',
+            data: {
+                id: id,
+                response: blogToRemove
+            }
+        })
+    }
+    }
+
+
 const blogReducer = (state = [], action) => {
     console.log('state now: ', state)
     console.log('action', action)
@@ -58,6 +72,10 @@ const blogReducer = (state = [], action) => {
             return state.concat(newBlog)
         case 'INIT_BLOGS':
             return action.data.sort((a, b) => b.likes - a.likes)
+        case 'REMOVE_BLOG':
+            const idToRemove = action.data.id
+            console.log('idToremove',idToRemove)
+            return state.filter(blog => blog.id !== idToRemove)
         default:
             return state
     }
