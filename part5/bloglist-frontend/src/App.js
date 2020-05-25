@@ -11,9 +11,9 @@ import {like, remove} from './reducers/blogReducer'
 import {setNotification} from "./reducers/nofificationReducer"
 import {setError} from "./reducers/errorReducer"
 import {createBlog, initializeBlogs} from "./reducers/blogReducer"
-import {loggedUser} from "./reducers/userReducer";
-import {login} from "./reducers/userReducer";
-import {logout} from "./reducers/userReducer";
+import {loggedUser} from "./reducers/loginReducer";
+import {login} from "./reducers/loginReducer";
+import {logout} from "./reducers/loginReducer";
 
 const App = () => {
 
@@ -27,7 +27,6 @@ const App = () => {
     useEffect(() => {
         dispatch(initializeBlogs())
     },[dispatch])
-
 
     useEffect(() => {
         dispatch(loggedUser())

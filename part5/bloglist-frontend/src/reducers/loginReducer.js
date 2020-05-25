@@ -40,7 +40,7 @@ export const loggedUser = () => {
     }
 }
 
-const userReducer = (state = null, action) => {
+const loginReducer = (state = null, action) => {
     console.log('state now: ', state)
     console.log('action', action)
 
@@ -56,4 +56,4 @@ const userReducer = (state = null, action) => {
     }
 }
 
-export default userReducer
+export default loginReducer
