@@ -1,15 +1,10 @@
 import React, { useState } from 'react'
-import {like} from '../reducers/blogReducer'
-import {removeBlog} from "../reducers/blogReducer";
-import {useDispatch} from "react-redux";
 
-const Blog = ({ blog,user, blogs,  }) => {
-
+const Blog = ({ blog, user, like, remove}) => {
     const [showBlogDetails, setShowBlogDetails] = useState(false)
     const [buttonLabel, setButtonLabel] = useState('view')
     const showOrHide = { display: showBlogDetails ? '' : 'none' }
     const showForOwnerOnly = { display: user.id === (blog.user.id || blog.user) ? '' : 'none', backgroundColor: 'blue' }
-    const dispatch = useDispatch()
 
     const toggleView = () => {
         if (showBlogDetails) {
@@ -31,20 +26,16 @@ const Blog = ({ blog,user, blogs,  }) => {
             user: blog.user.id || blog.user,
             id: blog.id
         }
-        dispatch(like(blogObject))
+        like(blogObject)
     }
 
 
 
-    const remove = (event) => {
+    const removeBlog = (event) => {
         event.preventDefault()
         const message = `Remove blog ${blog.title} by ${blog.author}`
         if (window.confirm(message)) {
-            try {
-                dispatch(removeBlog(blog.id))
-            } catch (e) {
-                console.log(e.message)
-            }
+            remove(blog.id)
         }
     }
 
@@ -66,7 +57,7 @@ const Blog = ({ blog,user, blogs,  }) => {
                 <div>{blog.url}</div>
                 <div>Likes {blog.likes} <button id='like' onClick={likeBlog}>like</button></div>
                 <div>{blog.user.username}</div>
-                <button id='remove-blog' style={showForOwnerOnly} onClick={remove}>remove</button>
+                <button id='remove-blog' style={showForOwnerOnly} onClick={removeBlog}>remove</button>
             </div>
         </div>
     )

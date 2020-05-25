@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Blog from './components/Blog'
-import blogService from './services/blogs'
-import loginService from './services/login'
 import LoginForm from './components/LoginForm'
 import BlogForm from './components/BlogForm'
 import './App.css'
@@ -9,18 +7,22 @@ import Notification from './components/Notification'
 import Error from './components/Error'
 import Togglable from './components/Togglable'
 import { useDispatch, useSelector } from 'react-redux'
+import {like, remove} from './reducers/blogReducer'
 import {setNotification} from "./reducers/nofificationReducer"
 import {setError} from "./reducers/errorReducer"
 import {createBlog, initializeBlogs} from "./reducers/blogReducer"
+import {loggedUser} from "./reducers/userReducer";
+import {login} from "./reducers/userReducer";
+import {logout} from "./reducers/userReducer";
 
 const App = () => {
 
-    const [user, setUser] = useState(null)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const blogFormRef = React.createRef()
     const dispatch = useDispatch()
     const blogs = useSelector(state => state.blogs)
+    const user = useSelector(state => state.user)
 
     useEffect(() => {
         dispatch(initializeBlogs())
@@ -28,23 +30,13 @@ const App = () => {
 
 
     useEffect(() => {
-        const loggedUserJSON = window.localStorage.getItem('loggedBlogAppUser')
-        if (loggedUserJSON) {
-            const user = JSON.parse(loggedUserJSON)
-            setUser(user)
-            blogService.setToken(user.token)
-        }
-    }, [])
+        dispatch(loggedUser())
+    }, [dispatch])
 
     const handleLogin = async (event) => {
         event.preventDefault()
         try {
-            const user = await loginService.login({ username, password } )
-            window.localStorage.setItem(
-                'loggedBlogAppUser', JSON.stringify(user)
-            )
-            blogService.setToken(user.token)
-            setUser(user)
+            await dispatch(login(username,password))
             setUsername('')
             setPassword('')
         } catch (exception) {
@@ -53,20 +45,32 @@ const App = () => {
 
     const handleLogout = (event) => {
         event.preventDefault()
-        window.localStorage.clear()
-        setUser(null)
+        dispatch(logout())
         setUsername('')
         setPassword('')
     }
 
-    const addBlog = async (newObject) => {
+    const addBlog =  async (newObject) => {
         try {
             blogFormRef.current.toggleVisibility()
-            dispatch(createBlog(newObject))
+            await dispatch(createBlog(newObject))
             dispatch(setNotification(`a new blog ${newObject.title} by ${newObject.author} succesfully added`,5))
         } catch (exception) {
             dispatch(setError(exception.message,5))
         }
+    }
+    const likeBlog = (blogObject) => {
+        try {
+            dispatch(like(blogObject))
+        }catch (e) { console.log(e.message)
+        }
+    }
+    const removeBlog = (id) => {
+            try {
+                dispatch(remove(id))
+            } catch (e) {
+                console.log(e.message)
+            }
     }
     const loginForm = () => {
         return (
@@ -100,15 +104,6 @@ const App = () => {
         )
     }
 
-    const likeBlog = async (id,blogObject,setLikes) => {
-        try {
-            const response = await blogService.update(id,blogObject)
-            setLikes(response.likes)
-        }catch (e) { console.log(e.message)
-        }
-    }
-
-
     return (
         <div>
             <h1>blogs</h1>
@@ -124,6 +119,7 @@ const App = () => {
                           user={ user }
                           blogs={ blogs }
                           like={ likeBlog }
+                          remove={ removeBlog }
                     />
                           ) }
         </div>

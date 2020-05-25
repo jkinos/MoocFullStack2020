@@ -34,7 +34,7 @@ export const initializeBlogs = () => {
 
 }
 
-export const removeBlog = id => {
+export const remove = id => {
     return async dispatch => {
         const blogToRemove = await blogService.remove(id)
         dispatch({
