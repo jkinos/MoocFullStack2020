@@ -4,8 +4,10 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import notificationReducer from "./reducers/nofificationReducer";
 import errorReducer from "./reducers/errorReducer"
+import blogReducer from "./reducers/blogReducer";
 
 const reducer = combineReducers({
+    blogs: blogReducer,
     notification: notificationReducer,
     error: errorReducer
 })

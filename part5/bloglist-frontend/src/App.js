@@ -8,27 +8,24 @@ import './App.css'
 import Notification from './components/Notification'
 import Error from './components/Error'
 import Togglable from './components/Togglable'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {setNotification} from "./reducers/nofificationReducer"
-import {setError} from "./reducers/errorReducer";
+import {setError} from "./reducers/errorReducer"
+import {createBlog, initializeBlogs} from "./reducers/blogReducer"
 
 const App = () => {
 
-    const [blogs, setBlogs] = useState([])
     const [user, setUser] = useState(null)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const blogFormRef = React.createRef()
     const dispatch = useDispatch()
+    const blogs = useSelector(state => state.blogs)
 
     useEffect(() => {
-        const getBlogs = async () => {
-            const blogs = await blogService.getAll()
-            const blogsOrderedByLikes = blogs.sort((a, b) => b.likes - a.likes)
-            setBlogs(blogsOrderedByLikes)
-        }
-        getBlogs()
-    }, [])
+        dispatch(initializeBlogs())
+    },[dispatch])
+
 
     useEffect(() => {
         const loggedUserJSON = window.localStorage.getItem('loggedBlogAppUser')
@@ -65,9 +62,8 @@ const App = () => {
     const addBlog = async (newObject) => {
         try {
             blogFormRef.current.toggleVisibility()
-            const blog = await blogService.create(newObject)
-            setBlogs(blogs.concat(blog))
-            dispatch(setNotification(`a new blog ${blog.title} by ${blog.author} succesfully added`,5))
+            dispatch(createBlog(newObject))
+            dispatch(setNotification(`a new blog ${newObject.title} by ${newObject.author} succesfully added`,5))
         } catch (exception) {
             dispatch(setError(exception.message,5))
         }
@@ -127,7 +123,6 @@ const App = () => {
                           blog={ blog }
                           user={ user }
                           blogs={ blogs }
-                          setBlogs={ setBlogs }
                           like={ likeBlog }
                     />
                           ) }

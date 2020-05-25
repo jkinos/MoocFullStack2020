@@ -21,7 +21,7 @@ export const setNotification = (message, time) => {
 
 export const timeout = () => {
     return {
-        type:'TIMEOUT'
+        type:'TIME_OUT'
     }
 }
 
@@ -32,7 +32,7 @@ const notificationReducer = (state = null, action) => {
     switch (action.type) {
         case 'NOTIFICATION':
             return action.data.notification
-        case 'TIMEOUT':
+        case 'TIME_OUT':
             return null
         default:
             return state

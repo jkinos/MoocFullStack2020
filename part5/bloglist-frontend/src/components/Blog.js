@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import blogService from '../services/blogs'
 
 const Blog = ({ blog,user, blogs, setBlogs, like, }) => {
+    console.log('blog', blog, 'user',user)
+
     const [likes, setLikes] = useState(blog.likes)
     const [showBlogDetails, setShowBlogDetails] = useState(false)
     const [buttonLabel, setButtonLabel] = useState('view')
