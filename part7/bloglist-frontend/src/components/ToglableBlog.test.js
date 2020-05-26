@@ -2,9 +2,9 @@ import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 import { render, fireEvent } from '@testing-library/react'
 import { prettyDOM } from '@testing-library/dom'
-import Blog from './Blog'
+import ToglableBlog from './ToglableBlog'
 
-describe('<Blog/>', ()=> {
+describe('<ToglableBlog/>', ()=> {
     let component
     const mockHandler = jest.fn()
 
@@ -21,7 +21,7 @@ describe('<Blog/>', ()=> {
         }
 
         component = render(
-            <Blog blog={blog} user={user} like={mockHandler}/>
+            <ToglableBlog blog={blog} user={user} like={mockHandler}/>
         )
     })
 
