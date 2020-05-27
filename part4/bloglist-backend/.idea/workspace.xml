@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac53c2d2-5fb0-4a4a-886c-b92b4569aa29" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/comment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/testing.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/testing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/blog.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/cypress/screenshots/examples/blog_app.spec.js/Blog app -- Login form is shown -- before each hook (failed).png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.js" afterDir="false" />
@@ -194,19 +190,6 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.start:test">
-    <configuration name="when there is initially one user at db" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/blog_api.test.js" />
-      <test-names>
-        <test-name value="when there is initially one user at db" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <configuration name="when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -253,13 +236,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.start:test" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="Jest.when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " />
-        <item itemvalue="Jest.when there is initially one user at db" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +286,7 @@
       <workItem from="1587746670346" duration="36715000" />
       <workItem from="1589022529653" duration="12294000" />
       <workItem from="1589561231776" duration="119000" />
-      <workItem from="1590072959081" duration="16832000" />
+      <workItem from="1590072959081" duration="19663000" />
     </task>
     <servers />
   </component>
@@ -317,22 +310,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1590415010264" />
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1590566053989">
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1590569679136">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590566053989" />
-    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1590566053989">
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590569679136" />
+    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1590569679136">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590566053989" />
-    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1590566053989">
+    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590569679136" />
+    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1590569679135">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590566053989" />
-    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1590566053989">
+    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590569679135" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1590569679136">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590566053989" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590569679136" />
     <state width="1493" height="268" key="GridCell.Tab.1.bottom" timestamp="1587659802288">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -393,5 +386,17 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587652250863" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/models/comment.js</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
