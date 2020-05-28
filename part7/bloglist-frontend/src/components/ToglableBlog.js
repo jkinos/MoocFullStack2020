@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import {Link} from "react-router-dom";
 
-
 const ToglableBlog = ({ user, blog, like, remove}) => {
     console.log('userrrr', user)
     console.log ('bloggggg', blog)
@@ -56,13 +55,13 @@ const ToglableBlog = ({ user, blog, like, remove}) => {
         return (
             <div className='blog' style={blogStyle}>
                 <Link to={`/blogs/${blog.id}`}>{blog.title} {blog.author}</Link>
-                    <button id='viewOrHide' onClick={toggleView}>{buttonLabel}</button>
+                    <button style={{float:'right'}} id='viewOrHide' onClick={toggleView}>{buttonLabel}</button>
                 <div style={showOrHide} className='showOrHide'>
                     <div>{blog.url}</div>
                     <div>Likes {blog.likes}
                         <button id='like' onClick={likeBlog}>like</button>
                     </div>
-                    <div>{blog.user.username}</div>
+                    <div>added by {blog.user.username}</div>
                     <button id='remove-blog' style={showForOwnerOnly} onClick={removeBlog}>remove</button>
                 </div>
             </div>

@@ -6,9 +6,11 @@ import notificationReducer from "./reducers/nofificationReducer";
 import errorReducer from "./reducers/errorReducer"
 import blogReducer from "./reducers/blogReducer";
 import loginReducer from './reducers/loginReducer'
+import userReducer from "./reducers/userReducer";
 
 const reducer = combineReducers({
     blogs: blogReducer,
+    users: userReducer,
     user: loginReducer,
     notification: notificationReducer,
     error: errorReducer

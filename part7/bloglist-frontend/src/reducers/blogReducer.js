@@ -1,4 +1,5 @@
 import blogService from '../services/blogs'
+import commentService from '../services/comments'
 
 export const like = (blog) => {
     const id = blog.id
@@ -12,13 +13,24 @@ export const like = (blog) => {
     }
 }
 
-export const createBlog = content => {
-    console.log('content',content)
+export const commentBlog = (blog,comment) => {
+    const id = blog.id
+    console.log('id', id)
     return async dispatch => {
-        const newBlog = await blogService.create(content)
+        const newComment = await commentService.create(id, comment)
+        dispatch({
+            type: 'COMMENT',
+            data: {blog: blog, comment: newComment}
+        })
+    }
+}
+
+
+export const createBlog = updatedBlog => {
+    return async dispatch => {
         dispatch({
             type: 'NEW_BLOG',
-            data: newBlog,
+            data: updatedBlog
         })
     }
 }
@@ -60,6 +72,15 @@ const blogReducer = (state = [], action) => {
                 ...blogToLike, likes: blogToLike.likes + 1
             }
             return state.map(blog => blog.id !== id ? blog : likedBlog)
+        case 'COMMENT':
+            const blogId = action.data.blog.id
+            const comment = action.data.comment
+            const blogToComment = state.find(b => b.id === blogId)
+            console.log(blogToComment)
+            const commentedBlog = {
+                ...blogToComment, comments: [...blogToComment.comments,comment]
+            }
+            return state.map(blog => blog.id !== blogId ? blog : commentedBlog)
         case 'NEW_BLOG':
             const newBlog = {
                 title: action.data.title,
@@ -67,7 +88,8 @@ const blogReducer = (state = [], action) => {
                 url: action.data.url,
                 likes: action.data.likes,
                 id: action.data.id,
-                user: action.data.user
+                user: action.data.user,
+                comments: []
             }
             return state.concat(newBlog)
         case 'INIT_BLOGS':
@@ -75,6 +97,7 @@ const blogReducer = (state = [], action) => {
         case 'REMOVE_BLOG':
             const idToRemove = action.data.id
             console.log('idToremove',idToRemove)
+
             return state.filter(blog => blog.id !== idToRemove)
         default:
             return state

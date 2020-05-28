@@ -3,18 +3,15 @@ import {Link} from "react-router-dom"
 
 import '../App.css'
 
-const User = ({user}) => {
-    if(!user) {
-        return null
-    }
+const UserLink = ({user}) => {
 
     return(
-    <tr>
-    <td><Link to={`/users/${user.id}`}>{user.username}</Link></td>
-    <td>{user.blogs.length}</td>
-
-
-    </tr>
+        <tr>
+            <td><Link to={`/users/${user.id}`}>{user.username}</Link>
+            </td>
+            <td>{user.blogs.length}
+            </td>
+        </tr>
 )
 }
-export default User
+export default UserLink

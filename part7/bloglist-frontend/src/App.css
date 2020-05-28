@@ -36,6 +36,9 @@
     transform: rotate(360deg);
   }
 }
+td {
+  padding-right: 10px;
+}
 .success {
   color: green;
   background: lightgrey;
