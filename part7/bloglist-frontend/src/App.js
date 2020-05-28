@@ -63,7 +63,7 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <Menu loggedUser={loggedUser} handleLogout={handleLogout}/>
             <h1>blog app</h1>
             <Notification/>

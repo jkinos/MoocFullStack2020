@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Form, Button } from 'react-bootstrap'
+
 
 const BlogForm = ({ addBlog, user }) => {
     const [title, setTitle] = useState('')
@@ -23,20 +25,35 @@ const BlogForm = ({ addBlog, user }) => {
     }
 
     return (
-        <form id='blogForm' onSubmit={handleSubmit}>
-            <div>
-                title: <input id='title' value={title} name='Title' onChange={handleTitleChange}/>
-            </div>
-            <div>
-                author: <input id='author' value={author} name='Author' onChange={handleAuthorChange}/>
-            </div>
-            <div>
-                url: <input id='url'value={url} name='Author' onChange={handleUrlChange}/>
-            </div>
-            <div>
-                <button id='create' type="submit">create</button>
-            </div>
-        </form>
+
+        <Form id='blogForm' onSubmit={handleSubmit}>
+            <Form.Group>
+                <Form.Label>title:</Form.Label>
+                <Form.Control
+                    id='title'
+                    value={title}
+                    name='Title'
+                    onChange={handleTitleChange}/>
+                <Form.Label>author:</Form.Label>
+                <Form.Control
+                    id='author'
+                    value={author}
+                    name='Author'
+                    onChange={handleAuthorChange}/>
+                <Form.Label>url:</Form.Label>
+                <Form.Control
+                    id='url'
+                    value={url}
+                    name='Author'
+                    onChange={handleUrlChange}/>
+                <Button
+                    variant="primary"
+                    id='create'
+                    type="submit">
+                    create
+                </Button>
+            </Form.Group>
+        </Form>
     )
 }
 export default BlogForm

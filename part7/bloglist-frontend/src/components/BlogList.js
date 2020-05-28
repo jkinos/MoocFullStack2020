@@ -8,6 +8,7 @@ import {useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
 import {updateUserBlogs} from "../reducers/userReducer";
 import blogService from '../services/blogs'
+import { Table } from 'react-bootstrap'
 
 const BlogList = ({blogs,user}) => {
     const blogFormRef = React.createRef()
@@ -33,7 +34,7 @@ const BlogList = ({blogs,user}) => {
             />
         </Togglable>
 
-    const blogStyle = {
+    /*const blogStyle = {
         paddingTop: 10,
         paddingBottom: 15,
         paddingLeft: 15,
@@ -42,17 +43,24 @@ const BlogList = ({blogs,user}) => {
         borderWidth: 1,
         marginBottom: 5,
         listStyle: 'none'
-    }
+    }*/
     return (
         <div>
     <h2>create new</h2>
     { blogForm() }
     <br/>
-    { blogs.map(blog =>
-        <li key={blog.id} style={blogStyle}>
+            <Table striped>
+                <tbody>
+            { blogs.map(blog =>
+        <tr key={blog.id} >
+            <td>
             <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
-        </li>
+            </td>
+            <td>{blog.author}</td>
+        </tr>
     )}
+                </tbody>
+            </Table>
         </div>
     )
 }
