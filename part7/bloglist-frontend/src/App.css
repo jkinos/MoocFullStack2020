@@ -40,3 +40,6 @@ a:hover {
 p{
   font-size: large;
 }
+#logout{
+  border-color: transparent;
+}

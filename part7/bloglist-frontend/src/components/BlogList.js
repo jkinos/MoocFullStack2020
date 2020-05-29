@@ -44,7 +44,7 @@ const BlogList = ({blogs,user,showBanner}) => {
             <h1>Hello, Blog Lover!</h1>
             <p>
                 <i>
-                    This is the most awesome blog app in the whole god damn world wide web, an application desinged for you to keep track of your favorite blogs!</i>
+                    This is the most awesome Blog App in the whole god damn world wide web, an application desinged for you to keep track of your favorite blogs!</i>
             </p>
             <p>
                 <i>Add them, like them, comment them...remove them.</i>

@@ -4,6 +4,7 @@ import LoginForm from "./LoginForm";
 import {login} from "../reducers/loginReducer";
 import {setError} from "../reducers/errorReducer";
 import {useDispatch} from "react-redux";
+import {FiLogIn} from 'react-icons/fi'
 
 const Login = ({username, password, setUsername, setPassword}) => {
     const dispatch = useDispatch()
@@ -19,7 +20,7 @@ const Login = ({username, password, setUsername, setPassword}) => {
     }
     const loginForm = () => {
         return (
-            <Togglable buttonLabel='login' variant='outline-light'>
+            <Togglable buttonLabel='login' variant='outline-light'image={<FiLogIn/>}>
                 <LoginForm
                     username={ username }
                     password={ password }

@@ -3,6 +3,7 @@ import { Navbar,Nav, Button} from "react-bootstrap";
 import Login from "./Login";
 import {logout} from "../reducers/loginReducer";
 import {useDispatch} from "react-redux";
+import {FiLogOut} from 'react-icons/fi'
 
 const Menu = ({loggedUser}) => {
 
@@ -48,7 +49,7 @@ const Menu = ({loggedUser}) => {
                 </Nav>
                 <Nav>
                     <Nav.Link eventKey="disabled" disabled>{loggedUser.username} logged in</Nav.Link>
-                    <Button variant='outline-light' onClick={handleLogout}>logout</Button>
+                    <Button id='logout' variant='outline-light' onClick={handleLogout}>logout <FiLogOut/> </Button>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
