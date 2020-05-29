@@ -40,7 +40,7 @@ const BlogList = ({blogs,user,showBanner}) => {
             return ''
         }
         return(
-        <Jumbotron id='banner' style={{backgroundColor: '#f8f9fa',borderColor:'black}'}}>
+        <Jumbotron id='banner' style={{backgroundColor: '#f8f9fa'}}>
             <h1>Hello, Blog Lover!</h1>
             <p>
                 <i>

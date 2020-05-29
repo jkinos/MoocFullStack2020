@@ -42,9 +42,10 @@ const App = () => {
     }
 
     return (
+        <div>
+        <Menu loggedUser={loggedUser}/>
 
         <div className='container'>
-            <Menu loggedUser={loggedUser}/>
             <br/>
             <Notification/>
             <Error/>
@@ -66,6 +67,7 @@ const App = () => {
                     <BlogList blogs={blogs} user={loggedUser} showBanner='true'/>
                 </Route>
             </Switch>
+        </div>
         </div>
         )
 }

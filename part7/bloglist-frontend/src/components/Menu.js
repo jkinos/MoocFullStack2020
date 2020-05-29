@@ -21,7 +21,7 @@ const Menu = ({loggedUser}) => {
     if(loggedUser===null){
         console.log('logged user', loggedUser)
         return (
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar style={{maxWidth:1140, marginLeft: 'auto', marginRight:'auto'}}collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Navbar.Brand id='brand' href="/">Blog App</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
@@ -39,7 +39,7 @@ const Menu = ({loggedUser}) => {
     }
 
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar style={{maxWidth:1140,marginLeft: 'auto', marginRight:'auto'}}collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Navbar.Brand href="/">Blog App</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
