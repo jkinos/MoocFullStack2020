@@ -1,15 +1,17 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {Table} from 'react-bootstrap'
 
 const UserList = ({users}) => {
 
     return(
         <div>
             <h1>Users</h1>
-            <table>
+            <br/>
+            <Table striped>
                 <thead>
                 <tr>
-                    <th> </th><th><h3>blogs created</h3></th>
+                    <th>User</th><th>Blogs created</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -20,7 +22,7 @@ const UserList = ({users}) => {
                 </tr>
             )}
             </tbody>
-            </table>
+            </Table>
         </div>
     )
 }

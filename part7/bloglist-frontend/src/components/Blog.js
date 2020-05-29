@@ -4,13 +4,23 @@ import {useDispatch} from "react-redux";
 import {
     useHistory
 } from 'react-router-dom'
+import { Table, Form, Button,Card } from 'react-bootstrap'
+import {AiFillDelete, AiFillLike } from 'react-icons/ai'
 
 
 const Blog = ({ user, blog }) => {
-    const showForOwnerOnly = {display: user.id === (blog.user.id || blog.user) ? '' : 'none', backgroundColor: 'blue'}
+
+    const showForOwnerOnly = () => {
+        if(!user) {
+            return {display: 'none'}
+        }
+            return {display: user.id === (blog.user.id || blog.user) ? '' : 'none'}
+        }
+
     const [comment, setComment] = useState('')
     const dispatch = useDispatch()
     const history = useHistory()
+
 
     const likeBlog = async (event) => {
         event.preventDefault()
@@ -67,27 +77,50 @@ const Blog = ({ user, blog }) => {
     }
 
     const comments = () => {
-        console.log('kommentut',blog.comments)
+
         if (!blog.comments || blog.comments.length===0){
-            return <div>This blog doesn't have any comments yet.</div>
+            return <tbody><tr><td>This blog doesn't have any comments yet.</td></tr></tbody>
         }
-        return <ul>{blog.comments.map(c =><li key={c.id}>{c.comment}</li>)}</ul>
+        return <tbody>{blog.comments.map(c =><tr key={c.id}><td>{c.comment}</td></tr>)}</tbody>
 
     }
 
+    const commentForm = () =>
+            <Form onSubmit={addComment}>
+                <Form.Group>
+                    <Form.Control as="textarea" rows="3" placeholder='Write your comment here...' value={comment} onChange={({target})=>setComment(target.value)} />
+                </Form.Group>
+                <Form.Group>
+                    <Button id='addComment' variant='dark' type="submit">add comment</Button>
+                </Form.Group>
+            </Form>
+
+
     return (
         <div>
-            <h1>{blog.title} {blog.author}</h1>
-                <a href={blog.url}>{blog.url}</a>
-                <div>Likes {blog.likes}
-                    <button id='like' onClick={likeBlog}>like</button>
-                </div>
-                <div>added by {blog.user.username}</div>
-                <button id='remove-blog' style={showForOwnerOnly} onClick={removeBlog}>remove</button>
-            <h2>comments</h2>
-            <input value={comment} onChange={({target})=>setComment(target.value)}/>
-            <button onClick={addComment}>add comment</button>
+            <Card className="text-center">
+                <Card.Body>
+                    <Card.Title><h1>{blog.title}</h1></Card.Title>
+                    <Card.Title><a href={blog.url}>{blog.url}</a></Card.Title>
+                    <Card.Title>written by {blog.author}</Card.Title>
+                    <Card.Text>
+                        has {blog.likes} likes
+                    </Card.Text>
+                    <Button variant='dark' id='like' onClick={likeBlog}><AiFillLike/> like</Button>{' '}
+                    <Button variant='dark' id='remove-blog' style={showForOwnerOnly()} onClick={removeBlog}>remove <AiFillDelete/></Button>
+                </Card.Body>
+                <Card.Footer className="text-muted">added by {blog.user.username}</Card.Footer>
+            </Card>
+
+            <br/>
+            <br/>
+            {commentForm()}
+            <br/>
+            <Table striped>
+                <thead><tr><th>Comments</th></tr></thead>
                 {comments()}
+            </Table>
+            <br/>
         </div>
     )
 }

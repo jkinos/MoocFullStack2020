@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
-
+import { Form, Button, Col, Row } from 'react-bootstrap'
 
 const BlogForm = ({ addBlog, user }) => {
     const [title, setTitle] = useState('')
@@ -13,46 +12,72 @@ const BlogForm = ({ addBlog, user }) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(user.id)
-        addBlog({
-            title: title,
-            author: author,
-            url: url,
-            user: user.id
-        })
-        setTitle('')
-        setAuthor('')
-        setUrl('')
+            addBlog({
+                title: title,
+                author: author,
+                url: url,
+                user: user.id
+            })
+            setTitle('')
+            setAuthor('')
+            setUrl('')
     }
 
-    return (
+   if(!user) { return (
+       <div><i>You're not logged in. Log in to add a blog</i></div>
+   )
+   }
+   return(
 
         <Form id='blogForm' onSubmit={handleSubmit}>
-            <Form.Group>
-                <Form.Label>title:</Form.Label>
+
+            <Form.Group as={Row}>
+                <Form.Label column sm="2">Title</Form.Label>
+                <Col sm="10">
                 <Form.Control
+                    placeholder='blog'
                     id='title'
                     value={title}
                     name='Title'
                     onChange={handleTitleChange}/>
-                <Form.Label>author:</Form.Label>
+                </Col>
+            </Form.Group>
+
+            <Form.Group as={Row}>
+                <Form.Label column sm="2">Author</Form.Label>
+                <Col sm="10">
                 <Form.Control
+                    placeholder='author'
                     id='author'
                     value={author}
                     name='Author'
                     onChange={handleAuthorChange}/>
-                <Form.Label>url:</Form.Label>
+                </Col>
+            </Form.Group>
+
+            <Form.Group as={Row}>
+                <Form.Label column sm="2">Url</Form.Label>
+                <Col sm="10">
                 <Form.Control
+                    placeholder='https://someblog.com'
                     id='url'
                     value={url}
                     name='Author'
                     onChange={handleUrlChange}/>
-                <Button
-                    variant="primary"
+                    <br/>
+                </Col>
+            </Form.Group>
+
+            <Form.Group as={Row}>
+                <Col sm={{ span: 10}}>
+                <Button variant='dark'
                     id='create'
                     type="submit">
                     create
                 </Button>
+                </Col>
             </Form.Group>
+
         </Form>
     )
 }

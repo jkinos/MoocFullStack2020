@@ -1,6 +1,4 @@
 import React from "react";
-import Notification from "./Notification";
-import Error from "./Error";
 import Togglable from "./Togglable";
 import LoginForm from "./LoginForm";
 import {login} from "../reducers/loginReducer";
@@ -21,7 +19,7 @@ const Login = ({username, password, setUsername, setPassword}) => {
     }
     const loginForm = () => {
         return (
-            <Togglable buttonLabel='login'>
+            <Togglable buttonLabel='login' variant='outline-light'>
                 <LoginForm
                     username={ username }
                     password={ password }
@@ -34,9 +32,6 @@ const Login = ({username, password, setUsername, setPassword}) => {
     }
     return (
         <div>
-            <Notification/>
-            <Error/>
-            <h2>Log in to application</h2>
             { loginForm() }
         </div>
     )

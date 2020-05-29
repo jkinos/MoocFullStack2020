@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import '../App.css'
+import {Alert} from "react-bootstrap";
 
 const Error = () => {
     const error= useSelector(state => state.error)
@@ -8,9 +8,9 @@ const Error = () => {
         return ''
     }else {
         return (
-            <div className='error'>
+            <Alert variant="warning">
                 {error}
-            </div>
+            </Alert>
         )
     }
 }
