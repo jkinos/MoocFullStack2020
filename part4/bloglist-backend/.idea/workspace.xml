@@ -5,20 +5,8 @@
       <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/cypress/screenshots/examples/blog_app.spec.js/Blog app -- Login form is shown -- before each hook (failed).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/Blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/ToglableBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/ToglableBlog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/UserLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/UserLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/UserList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/UserList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/reducers/loginReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/reducers/loginReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/reducers/userReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start:test">
+  <component name="RunManager" selected="npm.start">
     <configuration name="when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -248,10 +236,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start:test" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start" />
         <item itemvalue="Jest.when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " />
       </list>
     </recent_temporary>
@@ -286,7 +274,7 @@
       <workItem from="1587746670346" duration="36715000" />
       <workItem from="1589022529653" duration="12294000" />
       <workItem from="1589561231776" duration="119000" />
-      <workItem from="1590072959081" duration="23222000" />
+      <workItem from="1590072959081" duration="30507000" />
     </task>
     <servers />
   </component>
@@ -310,22 +298,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1590415010264" />
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1590573034135">
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1590785637841">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590573034135" />
-    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1590573034135">
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
+    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1590785637841">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590573034135" />
-    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1590573034135">
+    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
+    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1590785637841">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590573034135" />
-    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1590573034135">
+    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1590785637841">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590573034135" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
     <state width="1493" height="268" key="GridCell.Tab.1.bottom" timestamp="1587659802288">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
