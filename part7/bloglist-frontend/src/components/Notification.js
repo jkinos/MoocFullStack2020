@@ -9,7 +9,7 @@ const Notification = () => {
         return ''
     }else {
         return (
-            <Alert variant="success">
+            <Alert variant="info">
                 {notification}
             </Alert>
         )

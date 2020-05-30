@@ -9,6 +9,9 @@ import {Link} from "react-router-dom";
 import {updateUserBlogs} from "../reducers/userReducer";
 import blogService from '../services/blogs'
 import { Table, Jumbotron } from 'react-bootstrap'
+import {GiStarsStack} from 'react-icons/gi'
+import {WiStars} from 'react-icons/wi'
+import {FaMagic} from "react-icons/fa";
 
 const BlogList = ({blogs,user,showBanner}) => {
     const blogFormRef = React.createRef()
@@ -50,7 +53,7 @@ const BlogList = ({blogs,user,showBanner}) => {
                 <i>Add them, like them, comment them...remove them.</i>
             </p>
             <p>
-                <i>That's pretty much all you can do. Pretty Awesome!</i>
+                <i>That's pretty much all you can do. Pretty Awesome! <FaMagic/> <GiStarsStack/><WiStars/></i>
             </p>
         </Jumbotron>)
 
@@ -61,8 +64,8 @@ const BlogList = ({blogs,user,showBanner}) => {
             {banner()}
             <h1>Blogs</h1>
             <br/>
-    { blogForm() }
-    <br/>
+            { blogForm() }
+            <br/>
             <Table striped>
                 <thead>
                 <tr>
@@ -72,13 +75,11 @@ const BlogList = ({blogs,user,showBanner}) => {
                 </thead>
                 <tbody>
                 { blogs.map(blog =>
-        <tr key={blog.id} >
-            <td>
-            <Link to={`/blogs/${blog.id}`}>{blog.title}</Link>
-            </td>
-            <td>{blog.author}</td>
-        </tr>
-    )}
+                    <tr key={blog.id} >
+                        <td><Link to={`/blogs/${blog.id}`}>{blog.title}</Link></td>
+                        <td>{blog.author}</td>
+                    </tr>
+                )}
                 </tbody>
             </Table>
         </div>

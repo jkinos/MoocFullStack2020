@@ -1,5 +1,9 @@
 body {
-  background-color: #96d6d9;
+background-image: url('piqsels.com-id-jrrjt.jpg');
+  /*background-color: #96d6d9;*/
+  background-color: #6ccfd4;
+  background-blend-mode: lighten;
+background-repeat: round;
 }
 h1 {
   font-family: 'Abril Fatface', cursive;
@@ -7,6 +11,8 @@ h1 {
 
 .container {
   background-color: white;
+  min-height: 100vh;
+  padding-bottom: 10px;
 }
 .success {
   color: green;

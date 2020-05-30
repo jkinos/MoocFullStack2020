@@ -44,7 +44,6 @@ const App = () => {
     return (
         <div>
         <Menu loggedUser={loggedUser}/>
-
         <div className='container'>
             <br/>
             <Notification/>
