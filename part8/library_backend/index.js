@@ -140,36 +140,44 @@ const resolvers = {
         bookCount: () => Book.collection.countDocuments(),
         authorCount: () => Author.collection.countDocuments(),
         allAuthors: (root, args) => Author.find({}),
-        allBooks: (root, args) => {
+        allBooks: async (root, args) => {
             if (args.author && args.genre) {
-                return Book.find({}).filter(book => book.author === args.author).filter(book => book.genres.includes(args.genre))
+                const author = await Author.findOne( { name: args.author } )
+                const books = await Book.find( { author: { $in: [ author] } } )
+                    .populate('author', {name: 1, title: 1, id: 1,bookCount:1})
+                return books.filter(book => book.genres.includes(args.genre))
             }
             if (args.author) {
-                return Book.find({}).filter(book => book.author === args.author)
+                const author = await Author.findOne( { name: args.author } )
+                return books = await Book.find( { author: { $in: [ author] } } )
+                    .populate('author', {name: 1, title: 1, id: 1,bookCount:1})
             }
             if (args.genre) {
-                return Book.find({}).filter(book => book.genres.includes(args.genre))
+                return await Book.find( { genres: { $in: [ args.genre] } } )
+                    .populate('author', {name: 1, title: 1, id: 1,bookCount:1})
             }
-            return Book.find({}).populate('author', {name: 1, title: 1, id: 1})
+            return await Book.find({}).populate('author', {name: 1, title: 1, id: 1,bookCount:1})
         }
     },
     Author: {
-        bookCount: (root) => {
-            return Book.find({}).filter(book => book.author.name === root.name).length
+        bookCount: async (root,args) => {
+            const books =  await Book.find({}).populate('author',{id:1})
+            return books.filter(book => book.author.id=== root.id).length
         }
     },
     Mutation: {
         addBook: async (root, args) => {
-            const author = new Author({name: args.author})
-            const savedAuthor = await author.save()
+        let savedAuthor
+            let author = await Author.findOne( { name: args.author } )
+            if (!author) {
+                author = new Author({name: args.author})
+                savedAuthor = await author.save()
+            }else {
+                savedAuthor=author
+            }
             const book = new Book({...args, author: savedAuthor._id})
-             try {
-                    return await book.save()
-                } catch (error) {
-                    throw new UserInputError(error.message, {
-                        invalidArgs: args,
-                    })
-                }
+            const savedBook = await book.save()
+            return await Book.findById(savedBook.id).populate('author', {name: 1, id: 1, born: 1,bookCount:1})
         },
         editAuthor: async (root, args) => {
             const author = await Author.findOne({name: args.name})
