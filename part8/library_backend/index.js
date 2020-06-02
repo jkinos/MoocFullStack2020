@@ -171,12 +171,25 @@ const resolvers = {
             let author = await Author.findOne( { name: args.author } )
             if (!author) {
                 author = new Author({name: args.author})
-                savedAuthor = await author.save()
+                    try {
+                        savedAuthor = await author.save()
+                    }catch (error)  {
+                        throw new UserInputError(error.message, {
+                        invalidArgs: args,}
+                        )
+                    }
             }else {
                 savedAuthor=author
             }
             const book = new Book({...args, author: savedAuthor._id})
-            const savedBook = await book.save()
+            let savedBook
+            try {
+                savedBook = await book.save()
+            }catch (error)  {
+                throw new UserInputError(error.message, {
+                    invalidArgs: args,}
+                )
+            }
             return await Book.findById(savedBook.id).populate('author', {name: 1, id: 1, born: 1,bookCount:1})
         },
         editAuthor: async (root, args) => {
