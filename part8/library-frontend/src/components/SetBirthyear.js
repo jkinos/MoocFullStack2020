@@ -4,10 +4,18 @@ import { ALL_AUTHORS, EDIT_AUTHOR} from '../queries'
 import Notify from "./Notify";
 
 const SetBirthyear = (props) => {
-    const [name,setName]=useState('')
     const [born, setBorn]=useState('')
     const result = useQuery(ALL_AUTHORS)
     const authors = () => result.data.allAuthors
+    const [name,setName]=useState('')
+
+
+    const options = ()=> {
+        if (result.loading) {
+            return <option>''</option>
+        }
+        return authors().map(a => <option key={a.id} value={a.name}>{a.name}</option>)
+    }
 
     const [ setBornYear ] = useMutation(EDIT_AUTHOR, {
         refetchQueries: [  {query: ALL_AUTHORS} ],
@@ -15,12 +23,9 @@ const SetBirthyear = (props) => {
             props.setError('something went terribly wrong')
         }
     })
-    console.log('name',name,'born',born)
+
     const submit = async (event) => {
         event.preventDefault()
-        if(name===''){
-            setName(authors()[0].name)
-        }
         const bornToInt= parseInt(born)
 
         setBornYear({
@@ -39,7 +44,6 @@ const SetBirthyear = (props) => {
     if (result.loading)  {
         return <div>loading...</div>
     }
-    const options = authors().map(a =>   <option key={a.id} value={a.name}>{a.name}</option>)
 
     return (
         <div>
@@ -49,7 +53,8 @@ const SetBirthyear = (props) => {
                 <div>
                     name:
                     <select value={name} onChange={({target}) => setName(target.value)}>
-                        {options}
+                        <option>select name</option>
+                        {options()}
                     </select>
                 </div>
                 <div>
