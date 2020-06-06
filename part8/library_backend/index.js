@@ -155,11 +155,12 @@ const typeDefs = gql`
             username: String!
             password: String!
         ): Token
+#        deleteAuthors:Author,
+#        deleteBooks:Book
     },
     type Subscription {
         bookAdded: Book!
     }
-
 
 `
 
@@ -190,12 +191,12 @@ const resolvers = {
             return context.currentUser
         }
     },
-    Author: {
+    /*Author: {
         bookCount: async (root,args) => {
             const books =  await Book.find({}).populate('author',{id:1})
             return books.filter(book => book.author.id=== root.id).length
         }
-    },
+    },*/
     Mutation: {
         addBook: async (root, args, context) => {
             const currentUser = context.currentUser
@@ -206,7 +207,7 @@ const resolvers = {
             let savedAuthor
             let author = await Author.findOne( { name: args.author } )
             if (!author) {
-                author = new Author({name: args.author})
+                author = new Author({name: args.author, bookCount:1})
                     try {
                         savedAuthor = await author.save()
                     }catch (error)  {
@@ -215,7 +216,8 @@ const resolvers = {
                         )
                     }
             }else {
-                savedAuthor=author
+                author.bookCount=author.bookCount + 1
+                savedAuthor= await author.save()
             }
             const book = new Book({...args, author: savedAuthor._id})
             let savedBook
@@ -226,8 +228,9 @@ const resolvers = {
                     invalidArgs: args,}
                 )
             }
-            pubsub.publish('BOOK_ADDED', { bookAdded: book })
-            return await Book.findById(savedBook.id).populate('author', {name: 1, id: 1, born: 1,bookCount:1})
+            const bookToReturn = await Book.findById(savedBook.id).populate('author', {name: 1, id: 1, born: 1,bookCount:1})
+            pubsub.publish('BOOK_ADDED', { bookAdded: bookToReturn })
+            return bookToReturn
         },
         editAuthor: async (root, args, context) => {
             const currentUser = context.currentUser
@@ -269,7 +272,15 @@ const resolvers = {
             }
 
             return { value: jwt.sign(userForToken, JWT_SECRET) }
-        }
+        },
+        /*deleteAuthors:async ()=>{
+            await Author.deleteMany({})
+            return Author.find({})
+        },
+        deleteBooks:async ()=>{
+            await Book.deleteMany({})
+            return Book.find({})
+        }*/
     },
     Subscription: {
         bookAdded: {
