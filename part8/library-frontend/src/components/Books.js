@@ -36,8 +36,9 @@ const Books = (props) => {
         tmp.push(g.toString());
         return g;
       }
-    });
-    const uniqueGenres = uniqueGenreArrays.reduce((acc, cur) => [...acc, ...cur])
+    })
+      const genresInSameArray = uniqueGenreArrays.reduce((acc, cur) => [...acc, ...cur])
+      const uniqueGenres = [...new Set(genresInSameArray)]
 
     return (
     <div>
@@ -53,7 +54,7 @@ const Books = (props) => {
     if(!filteredBooks){
       return (
           books.map(a =>
-              <tr key={a.title}>
+              <tr key={a.id}>
                 <td>{a.title}</td>
                 <td>{a.author.name}</td>
                 <td>{a.published}</td>
@@ -63,7 +64,7 @@ const Books = (props) => {
     }
     return(
     filteredBooks.map(a=>
-        <tr key={a.title}>
+        <tr key={a.id}>
           <td>{a.title}</td>
           <td>{a.author.name}</td>
           <td>{a.published}</td>

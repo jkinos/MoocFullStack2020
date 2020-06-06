@@ -52,7 +52,8 @@ const SetBirthyear = (props) => {
             <form onSubmit={submit}>
                 <div>
                     name:
-                    <select value={name} onChange={({target}) => setName(target.value)}>
+                    <select
+                        value={name} onChange={({target}) => setName(target.value)}>
                         <option>select name</option>
                         {options()}
                     </select>

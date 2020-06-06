@@ -29,7 +29,7 @@ const Recommend = (props) => {
         if(books().length!==0 ) {
             return (
                 books().map(b =>
-                    <tr key={b.title}>
+                    <tr key={b.id}>
                         <td>{b.title}</td>
                         <td>{b.author.name}</td>
                         <td>{b.published}</td>
