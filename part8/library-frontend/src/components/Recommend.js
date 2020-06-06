@@ -11,9 +11,10 @@ const Recommend = (props) => {
     useEffect(() => {
         if(!genreResult.loading){
             getRecommendations({
-            variables: {genre:genre()}
+            variables: { genre: genre() }
         })
-    }
+
+        }
 //eslint-disable-next-line
     },[genreResult])
 

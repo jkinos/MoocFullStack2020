@@ -1,24 +1,26 @@
 import React, { useState } from 'react'
 import { useMutation } from '@apollo/client'
-import {ALL_BOOKS, ADD_BOOK, ALL_AUTHORS, FAVORITE_GENRE} from '../queries'
+import {ADD_BOOK, ALL_AUTHORS, BOOKS_BY_GENRE, FAVORITE_GENRE} from '../queries'
 import Notify from "./Notify";
 
-const NewBook = (props) => {
+const NewBook = ({show,setError, errorMessage, updateCacheWith}) => {
   const [title, setTitle] = useState('')
   const [author, setAuhtor] = useState('')
   const [published, setPublished] = useState('')
   const [genre, setGenre] = useState('')
   const [genres, setGenres] = useState([])
 
-  const [ addBook ] = useMutation(ADD_BOOK, {
-    refetchQueries: [  {query: ALL_BOOKS},{query: ALL_AUTHORS},{query: FAVORITE_GENRE}],
+  const [ addBook ] = useMutation(ADD_BOOK, {refetchQueries:[{query: ALL_AUTHORS},{query: FAVORITE_GENRE},{query:BOOKS_BY_GENRE}],
     onError: (error) => {
-      props.setError('something went terribly wrong')
+      setError('something went terribly wrong')
+    },
+    update: (store, response) => {
+      updateCacheWith(response.data.addBook)
     }
   })
 
 
-  if (!props.show) {
+  if (!show) {
     return null
   }
 
@@ -45,7 +47,7 @@ const NewBook = (props) => {
 
   return (
     <div>
-      <Notify errorMessage={props.errorMessage} />
+      <Notify errorMessage={errorMessage} />
       <form onSubmit={submit}>
         <div>
           title
