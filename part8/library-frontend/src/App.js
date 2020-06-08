@@ -109,6 +109,7 @@ const App = () => {
       />
         <Recommend
             show={page === 'recommend'}
+            page={page}
         />
 
       <NewBook

@@ -13,7 +13,6 @@ const Recommend = (props) => {
             getRecommendations({
             variables: { genre: genre() }
         })
-
         }
 //eslint-disable-next-line
     },[genreResult])

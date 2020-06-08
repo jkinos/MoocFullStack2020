@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
-import { useQuery } from '@apollo/client'
-import { ALL_BOOKS} from '../queries'
+import {useLazyQuery, useQuery} from '@apollo/client'
+import {ALL_BOOKS, BOOKS_BY_GENRE} from '../queries'
 
 const Books = (props) => {
   const result = useQuery(ALL_BOOKS)
   const [filteredBooks,setFilteredBooks] = useState(null)
   const [genre,setGenre] = useState('')
+  const [queryByGenre, genreResult]=useLazyQuery(BOOKS_BY_GENRE)
+
 
   if (!props.show) {
     return null
@@ -18,9 +20,12 @@ const Books = (props) => {
   const books = result.data.allBooks
 
   const getBooksByGenre = (g) => {
-    const booksByGenre= books.filter(book=>book.genres.includes(g))
-    setFilteredBooks(booksByGenre)
+    queryByGenre({variables: { genre: g }})
     setGenre(g)
+    if(!genreResult.loading && genreResult.data){
+      console.log(genreResult)
+      setFilteredBooks(genreResult.data.allBooks)
+    }
   }
   const resetGenres = () => {
     setFilteredBooks('')
