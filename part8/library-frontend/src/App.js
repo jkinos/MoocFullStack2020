@@ -7,7 +7,7 @@ import NewBook from './components/NewBook'
 import SetBirthyear from './components/SetBirthyear'
 import Login from './components/Login'
 import Recommend from "./components/Recommend";
-import {BOOK_ADDED, ALL_BOOKS,} from "./queries";
+import {BOOK_ADDED, ALL_BOOKS} from "./queries";
 
 const App = () => {
     const [page, setPage] = useState('authors')
@@ -19,7 +19,7 @@ const App = () => {
         const includedIn = (set, object) =>
             set.map(p => p.id).includes(object.id)
 
-        const dataInStore = client.readQuery({ query: ALL_BOOKS })
+        const dataInStore = client.readQuery({query: ALL_BOOKS})
         if (!includedIn(dataInStore.allBooks, addedBook)) {
             client.writeQuery({
                 query: ALL_BOOKS,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from '@apollo/client'
-import {ADD_BOOK, ALL_AUTHORS, BOOKS_BY_GENRE, FAVORITE_GENRE} from '../queries'
+import {ADD_BOOK, ALL_AUTHORS, BOOKS_BY_GENRE} from '../queries'
 import Notify from "./Notify";
 
 const NewBook = ({show,setError, errorMessage, updateCacheWith}) => {
@@ -9,8 +9,9 @@ const NewBook = ({show,setError, errorMessage, updateCacheWith}) => {
   const [published, setPublished] = useState('')
   const [genre, setGenre] = useState('')
   const [genres, setGenres] = useState([])
+  const [refetchQueries, setRefetchQueries] = useState([{query: ALL_AUTHORS}])
 
-  const [ addBook ] = useMutation(ADD_BOOK, {refetchQueries:[{query: ALL_AUTHORS},{query: FAVORITE_GENRE},{query:BOOKS_BY_GENRE}],
+  const [ addBook ] = useMutation(ADD_BOOK, {refetchQueries: refetchQueries,
     onError: (error) => {
       setError('something went terribly wrong')
     },
@@ -19,19 +20,17 @@ const NewBook = ({show,setError, errorMessage, updateCacheWith}) => {
     }
   })
 
-
   if (!show) {
     return null
   }
 
-  const submit = async (event) => {
+  const submit =  (event) => {
     event.preventDefault()
     const publishedToInt= parseInt(published)
 
     addBook({
       variables: { title, published: publishedToInt, author, genres }
     })
-
 
     setTitle('')
     setPublished('')
@@ -42,6 +41,7 @@ const NewBook = ({show,setError, errorMessage, updateCacheWith}) => {
 
   const addGenre = () => {
     setGenres(genres.concat(genre))
+    setRefetchQueries(refetchQueries.concat({query:BOOKS_BY_GENRE, variables: {genre: genre}}))
     setGenre('')
   }
 

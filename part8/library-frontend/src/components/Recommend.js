@@ -9,13 +9,14 @@ const Recommend = (props) => {
     const books = () => result.data.allBooks
 
     useEffect(() => {
-        if(!genreResult.loading){
+        if(genreResult.data ){
             getRecommendations({
             variables: { genre: genre() }
         })
+            console.log(result)
         }
 //eslint-disable-next-line
-    },[genreResult])
+    },[genreResult.data])
 
     if (!props.show) {
         return null
