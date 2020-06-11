@@ -1,5 +1,14 @@
 
-const calculateBmi = (heightInCM: number, weightInKG: number): string => {
+const calculateBmi = (args: Array<string>): string => {
+    if (args.length < 4) throw new Error('Not enough arguments');
+    if (args.length > 4) throw new Error('Too many arguments');
+    if (isNaN(Number(args[2])) || isNaN(Number(args[3]))) {
+        console.log(args)
+        throw new Error('Provided values were not numbers!');
+    }
+
+    const heightInCM = Number(args[2])
+    const weightInKG = Number(args[3])
     const heightInMeters = heightInCM/100
     const bmi = weightInKG / (heightInMeters*heightInMeters)
     console.log('bmi',bmi)
@@ -13,4 +22,9 @@ const calculateBmi = (heightInCM: number, weightInKG: number): string => {
     if ( bmi >= 40 ) { return 'Obese Class III (Very severely obese)' }
 }
 
-console.log(calculateBmi(180,74))
+try {
+    const result = calculateBmi(process.argv)
+    console.log(result)
+} catch (e) {
+    console.log('Error, something bad happened, message: ', e.message);
+}
