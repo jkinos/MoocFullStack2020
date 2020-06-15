@@ -1,6 +1,6 @@
 
-const calculateBmi = (args: Array<string>): string => {
-    if (args.length < 4) throw new Error('Not enough arguments');
+export const calculateBmi = (args: Array<string>): string => {
+    /*if (args.length < 4) throw new Error('Not enough arguments');
     if (args.length > 4) throw new Error('Too many arguments');
     if (isNaN(Number(args[2])) || isNaN(Number(args[3]))) {
         console.log(args)
@@ -8,7 +8,10 @@ const calculateBmi = (args: Array<string>): string => {
     }
 
     const heightInCM = Number(args[2])
-    const weightInKG = Number(args[3])
+    const weightInKG = Number(args[3])*/
+    const heightInCM = Number(args[0])
+    const weightInKG = Number(args[1])
+
     const heightInMeters = heightInCM/100
     const bmi = weightInKG / (heightInMeters*heightInMeters)
 
@@ -20,6 +23,7 @@ const calculateBmi = (args: Array<string>): string => {
     if ( bmi >= 30 && bmi < 35 ) { return 'Obese Class I (Moderately obese)' }
     if (bmi >= 35 && bmi < 40 ) { return 'Obese Class II (Severely obese)' }
     if ( bmi >= 40 ) { return 'Obese Class III (Very severely obese)' }
+    else { return 'bmi could not be calculated' }
 }
 
 try {
