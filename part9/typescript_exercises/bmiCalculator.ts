@@ -11,7 +11,7 @@ const calculateBmi = (args: Array<string>): string => {
     const weightInKG = Number(args[3])
     const heightInMeters = heightInCM/100
     const bmi = weightInKG / (heightInMeters*heightInMeters)
-    console.log('bmi',bmi)
+
     if (bmi < 15) { return 'Very severely underweight' }
     if (bmi >= 15 && bmi < 16 ) { return 'Severely underweight' }
     if (bmi >= 16 && bmi < 18.5) { return 'Underweight' }
