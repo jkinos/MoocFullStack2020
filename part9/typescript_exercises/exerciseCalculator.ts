@@ -8,16 +8,21 @@ interface Result {
     target: number,
     average: number
 }
-const calculateExercises = (args: Array<string>): Result => {
-    if (args.length < 4) throw new Error('Not enough arguments');
+export const calculateExercises = (periodsExerciseHoursPerDay: Array<number>, target: number): Result => {
+    /*if (args.length < 4) throw new Error('Not enough arguments');
     const [,, ...numbers] = args.map(Number);
     if (numbers.some(isNaN)){
         console.log(numbers);
         throw new Error('Provided values were not numbers!');
     }
-
     const target = numbers[0];
-    const [, ...periodsExerciseHoursPerDay] = numbers;
+    const [, ...periodsExerciseHoursPerDay] = numbers;*/
+
+    if ( !Array.isArray(periodsExerciseHoursPerDay)
+        || periodsExerciseHoursPerDay.some(isNaN)
+        || isNaN(target)){
+        throw new Error('malformatted parameters');
+    }
     const periodLength = periodsExerciseHoursPerDay.length;
     const trainingDays = periodsExerciseHoursPerDay.filter(hours => hours != 0).length;
     const totalHours = periodsExerciseHoursPerDay.reduce((acc:number, cur:number) => acc + cur);
@@ -38,13 +43,13 @@ const calculateExercises = (args: Array<string>): Result => {
 return { periodLength, trainingDays, success, rating, ratingDescription, target, average };
 };
 
-try {
+/*try {
     const result = calculateExercises(process.argv);
     console.log(result);
 } catch (e) {
     const result = (e as Error).message;
     console.log('Error, something bad happened, message: ', result);
-}
+}*/
 
 
 export default calculateExercises;

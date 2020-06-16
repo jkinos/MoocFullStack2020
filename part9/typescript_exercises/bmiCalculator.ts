@@ -27,11 +27,10 @@ export const calculateBmi = (args: Array<string>): string => {
     else { return 'bmi could not be calculated'; }
 };
 
-
-try {
+/*try {
     const result = calculateBmi(process.argv);
     console.log(result);
 } catch (e) {
     const result = (e as Error).message;
     console.log('Error, something bad happened, message: ', result);
-}
+}*/
