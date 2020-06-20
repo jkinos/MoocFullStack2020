@@ -1,7 +1,7 @@
 import React from "react";
-import { CourseParts} from "../types";
+import { CoursePart} from "../types";
 
-const Total: React.FC<CourseParts> = ({parts}) => {
+const Total: React.FC<{parts: CoursePart[]}> = ({parts}) => {
     return(
         <div>
             <p>
