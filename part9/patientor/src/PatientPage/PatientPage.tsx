@@ -1,6 +1,6 @@
 import React from "react";
 import {useParams} from "react-router-dom";
-import {useStateValue} from "../state";
+import {useStateValue ,setViewedPatients} from "../state";
 import axios from "axios";
 import {apiBaseUrl} from "../constants";
 import {Gender, Patient} from "../types";
@@ -18,10 +18,10 @@ const PatientPage = () => {
         const fetchViewedPatients = async () => {
                 if (!viewedPatients[id]) {
                     try {
-                        const { data: patientFromApi } = await axios.get<Patient[]>(
+                        const { data: patientsFromApi } = await axios.get<Patient[]>(
                         `${apiBaseUrl}/patients/${id}`
                     );
-                        dispatch({ type: "SET_VIEWED_PATIENT_LIST", payload: patientFromApi });
+                        dispatch(setViewedPatients(patientsFromApi));
                     } catch (e) {
                         console.error(e);
                     }
