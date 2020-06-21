@@ -45,7 +45,7 @@ export const setPatientList = (patientListFromApi: Patient[]): Action => {
 
 export const setViewedPatients = (patientsFromApi: Patient[]): Action => {
   return {
-    type: "SET_PATIENT_LIST",
+    type: "SET_VIEWED_PATIENT_LIST",
     payload: patientsFromApi
   };
 };

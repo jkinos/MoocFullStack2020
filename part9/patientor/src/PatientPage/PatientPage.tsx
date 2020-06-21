@@ -5,9 +5,10 @@ import axios from "axios";
 import {apiBaseUrl} from "../constants";
 import {Gender, Patient} from "../types";
 import {Container, Icon} from 'semantic-ui-react'
+import PatientEntry from './PatientEntry'
 
 
-const PatientPage = () => {
+const PatientPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [{viewedPatients}, dispatch] = useStateValue();
     const patient = viewedPatients[id];
@@ -48,6 +49,10 @@ const PatientPage = () => {
                 <h1>{patient.name} <Icon className={genderIcon()}/></h1>
                 <p><b>ssn: {patient.ssn}</b></p>
                 <p><b>occupation: {patient.occupation}</b></p>
+                <h2>entries</h2>
+                {
+                    patient.entries.map(entry => <PatientEntry key={entry.id} entry={entry}/>
+                )}
             </Container>
         )
 };
