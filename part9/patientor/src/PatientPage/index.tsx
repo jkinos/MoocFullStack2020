@@ -4,20 +4,16 @@ import {useStateValue, setViewedPatients, setDiagnoses} from "../state";
 import axios from "axios";
 import {apiBaseUrl} from "../constants";
 import {Diagnosis, Gender, Patient} from "../types";
-import {Container, Icon} from 'semantic-ui-react'
-import PatientEntry from './PatientEntry'
+import {Header, Icon} from 'semantic-ui-react'
+import PatientEntry from '../PatientEntry'
 
 
 const PatientPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const [{viewedPatients,diagnosisList}, dispatch] = useStateValue();
     const patient = viewedPatients[id];
-    console.log('diagnoses',diagnosisList)
-    console.log('patients',viewedPatients)
 
     React.useEffect(() => {
-        axios.get<void>(`${apiBaseUrl}/ping`);
-
         const fetchViewedPatients = async () => {
                 if (!viewedPatients[id]) {
                     try {
@@ -34,8 +30,6 @@ const PatientPage: React.FC = () => {
     },[dispatch,id,viewedPatients]);
 
     React.useEffect(() => {
-        axios.get<void>(`${apiBaseUrl}/ping`);
-
         const fetchDiagnosesList = async () => {
 
                 if(Object.keys(diagnosisList).length === 0 ){
@@ -68,21 +62,19 @@ const PatientPage: React.FC = () => {
     }
 
     return (
-            <Container>
-                <h1>{patient.name} <Icon className={genderIcon()}/></h1>
-                <p><b>ssn: {patient.ssn}</b></p>
-                <p><b>occupation: {patient.occupation}</b></p>
-                <h2>entries</h2>
+            <div>
+                <Header as="h1">{patient.name} <Icon className={genderIcon()}/></Header>
+                <div>ssn: {patient.ssn}</div>
+                <div>occupation: {patient.occupation}</div>
+                <Header as='h2'>entries</Header>
                 {
                     patient.entries.map(entry =>
-                        <PatientEntry
-                            key={entry.id}
-                            entry={entry}
-                            diagnosisList={diagnosisList}
-                            />
+                        <div key={entry.id} style={{paddingBottom: 10}}>
+                        <PatientEntry entry={entry}/>
+                        </div>
                 )}
-            </Container>
+            </div>
         )
 };
 
-export default PatientPage
+export default PatientPage;

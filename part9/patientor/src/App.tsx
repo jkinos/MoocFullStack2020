@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Button, Divider, Header, Container } from "semantic-ui-react";
 
@@ -8,7 +9,7 @@ import { useStateValue, setPatientList} from "./state";
 import { Patient } from "./types";
 
 import PatientListPage from "./PatientListPage";
-import PatientPage from "./PatientPage/PatientPage";
+import PatientPage from "./PatientPage";
 
 const App: React.FC = () => {
   const [, dispatch] = useStateValue();
