@@ -8,15 +8,15 @@ import {List, Card} from "semantic-ui-react";
 
 
 const PatientEntry: React.FC<{entry: Entry}> = ({entry}) => {
-    const [{diagnosisList}]=useStateValue()
-    const diagnoses = ()=> {
+    const [{diagnoses}]=useStateValue()
+    const entryDiagnoses = ()=> {
         if (entry.diagnosisCodes)
             return (
         <Card.Description>
                 <b>Diagnoses:</b>
             {entry.diagnosisCodes?.map(code  =>
             <List key={code}>
-                <List.Item>{code} {diagnosisList[code].name}</List.Item>
+                <List.Item>{code} {diagnoses[code].name}</List.Item>
             </List>)}
         <br/>
         </Card.Description>
@@ -29,11 +29,11 @@ const PatientEntry: React.FC<{entry: Entry}> = ({entry}) => {
     };
     switch (entry.type) {
         case "HealthCheck":
-            return <HealthCheckEntry entry={entry} diagnoses={diagnoses()}/>
+            return <HealthCheckEntry entry={entry} diagnoses={entryDiagnoses()}/>
         case "Hospital":
-            return <HospitalEntry entry={entry} diagnoses={diagnoses()}/>
+            return <HospitalEntry entry={entry} diagnoses={entryDiagnoses()}/>
         case "OccupationalHealthcare":
-            return <OccupationalHealthcareEntry entry={entry} diagnoses={diagnoses()}/>
+            return <OccupationalHealthcareEntry entry={entry} diagnoses={entryDiagnoses()}/>
         default:
             return assertNever(entry);
     }

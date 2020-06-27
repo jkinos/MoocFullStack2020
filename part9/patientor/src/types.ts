@@ -17,7 +17,6 @@ interface BaseEntry {
   specialist: string;
   diagnosisCodes?: Array<Diagnosis['code']>;
 }
-
 export enum HealthCheckRating {
   "Healthy" = 0,
   "LowRisk" = 1,
@@ -49,6 +48,11 @@ export type Entry =
     | Hospital
     | OccupationalHealthcare
     | HealthCheck;
+
+export type NewEntry =
+  | Omit<Hospital, 'id'>
+  | Omit<OccupationalHealthcare, 'id'>
+  | Omit<HealthCheck, 'id'>
 
 export interface Patient {
   id: string;
