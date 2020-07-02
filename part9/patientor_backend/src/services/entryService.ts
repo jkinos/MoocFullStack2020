@@ -5,10 +5,9 @@ import toNewEntry from '../utils'
 
 const addEntry = ( unvalidatedEntry: NewEntry, patientId:string): Entry => {
     const validatedEntry = toNewEntry(unvalidatedEntry) as NewEntry
-    const entryId: string = uuid();
 
     const newEntry: Entry = {
-        id: entryId,
+        id: uuid(),
         ...validatedEntry
     };
 
