@@ -18,7 +18,7 @@ const PatientPage: React.FC = () => {
     const patient = viewedPatients[id];
     const [modalOpen, setModalOpen] = React.useState<boolean>(false);
     const [error, setError] = React.useState<string | undefined>();
-    
+    console.log('viewed',viewedPatients)
     const openModal = (): void => setModalOpen(true);
 
     const closeModal = (): void => {
@@ -44,10 +44,11 @@ const PatientPage: React.FC = () => {
         const fetchViewedPatients = async () => {
                 if (!viewedPatients[id]) {
                     try {
-                        const { data: patientsFromApi } = await axios.get<Patient[]>(
+                        const { data: patientFromApi } = await axios.get<Patient[]>(
                         `${apiBaseUrl}/patients/${id}`
                     );
-                        dispatch(setViewedPatients(patientsFromApi));
+                        dispatch(setViewedPatients(patientFromApi[0]));
+                        console.log('patient',patientFromApi[0])
                     } catch (e) {
                         console.error(e);
                     }

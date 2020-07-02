@@ -12,7 +12,7 @@ export type Action =
     }
   | {
       type: "SET_VIEWED_PATIENT_LIST";
-      payload: Patient[]
+      payload: Patient
     }
   | {
       type: "SET_DIAGNOSES_LIST";
@@ -40,15 +40,14 @@ export const reducer = (state: State, action: Action): State => {
         }
       };
     case "SET_VIEWED_PATIENT_LIST":
+      console.log('viewes pat', state.viewedPatients)
       return {
         ...state,
         viewedPatients: {
-          ...action.payload.reduce(
-              (memo, patient) => ({ ...memo, [patient.id]: patient }),
-              {}
-          ),
-          ...state.viewedPatients
-        }
+          ...state.viewedPatients,
+              [action.payload.id]: action.payload
+        },
+        ...state.viewedPatients
       };
     case "SET_DIAGNOSES_LIST":
       return {
@@ -64,17 +63,23 @@ export const reducer = (state: State, action: Action): State => {
     case "ADD_PATIENT":
       return {
         ...state,
-        patients: {
-          ...state.patients,
-          [action.payload.id]: action.payload
+          patients: {
+            ...state.patients,
+            [action.payload.id]: action.payload
+          }
         }
-      };
     case "ADD_NEW_ENTRY":
-      console.log('id',action.payload.id)
-      console.log('vieved patients',state.viewedPatients)
       return {
-        ...state, 
-        ...state.viewedPatients[action.payload.id].entries.concat(action.payload.entry)
+        ...state,
+        viewedPatients: {
+          ...state.viewedPatients,
+          [action.payload.id]: {
+            ...state.viewedPatients[action.payload.id],
+            entries: [
+              ...state.viewedPatients[action.payload.id].entries.concat(action.payload.entry)
+          ]
+          }
+        }
       }
     default:
       return state;

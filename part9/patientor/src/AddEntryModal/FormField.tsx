@@ -1,24 +1,18 @@
 import React from "react";
-import { ErrorMessage, Field, FieldProps, FormikProps } from "formik";
+import { ErrorMessage, Field, FieldProps, FormikProps, } from "formik";
 import { Dropdown, DropdownProps, Form } from "semantic-ui-react";
-import { Diagnosis, Gender, Entry } from "../types";
+import { Diagnosis, HealthCheckRating } from "../types";
 
-// structure of a single option
-export type GenderOption = {
-  value: Gender;
+export type HealthCheckRatingOption = {
+  value: HealthCheckRating;
   label: string;
 };
-
-export type EntryOption = {
-    value: 'Hospital' | 'OccupationalHealthcare' | 'HealthCheck';
-    label: string;
-  };
 
 // props for select field component
 type SelectFieldProps = {
   name: string;
   label: string;
-  options: EntryOption[];
+  options: HealthCheckRatingOption[];
 };
 
 export const SelectField: React.FC<SelectFieldProps> = ({
@@ -42,11 +36,12 @@ interface TextProps extends FieldProps {
   label: string;
   placeholder: string;
 }
+  
 
 export const TextField: React.FC<TextProps> = ({
   field,
   label,
-  placeholder
+  placeholder,
 }) => (
   <Form.Field>
     <label>{label}</label>
@@ -56,6 +51,7 @@ export const TextField: React.FC<TextProps> = ({
     </div>
   </Form.Field>
 );
+
 
 /*
   for exercises 9.24.-

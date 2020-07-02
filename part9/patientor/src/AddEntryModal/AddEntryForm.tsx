@@ -1,124 +1,49 @@
-import React from "react";
-import { Grid, Button } from "semantic-ui-react";
-import { Field, Formik, Form } from "formik";
+import React, {useState} from "react";
+import { Entry } from "../types";
+import { EntryTypeRadioFilter} from "./EntryTypeRadioFilter"
+import AddHospitalEntryForm from "./AddHospitalEntryForm";
+import { AddHealthCheckEntryForm } from "./AddHealthCheckEntryForm"
+import {AddOccupationalHealthcareEntryForm } from "./AddOccupationalHealthcareEntryForm"
 
-import { TextField, DiagnosisSelection, EntryOption, SelectField } from "./FormField";
-import { Hospital } from "../types";
-import { useStateValue } from "../state";
+export type EntryFormValues = Omit<Entry, "id">;
 
-/*
- * use type Patient, but omit id and entries,
- * because those are irrelevant for new patient object.
- */
-export type EntryFormValues = Omit<Hospital, "id">;
-
-interface Props {
+export interface Props {
   onSubmit: (values: EntryFormValues) => void;
   onCancel: () => void;
 }
-const entryOptions: EntryOption[] = [
-    { value: 'Hospital', label: "Hospital" },
-    { value: 'OccupationalHealthcare', label: "Occupational Healthcare" },
-    { value: 'HealthCheck', label: "Health Check" }
-  ];
 
-export const AddEntryForm: React.FC<Props> = ({ onSubmit, onCancel }) => {    
-    const [{diagnoses}]=useStateValue()
+export const AddEntryForm: React.FC<Props> = ({ onSubmit, onCancel }) => {   
+    const [entryType, setEntryType] = useState('Hospital')
 
-  return (
-    <Formik
-      initialValues={{
-        type: "Hospital",
-        description: "",
-        date: "",
-        specialist: "",
-        diagnosisCodes: [],
-        discharge: {
-            date: "",
-            criteria: ""
-        }
-      }}
-      onSubmit={onSubmit}
-      validate={values => {
-        const requiredError = "Field is required";
-        const errors: { [field: string]: string } = {};
-        if (!values.type) {
-          errors.type = requiredError;
-        }
-        if (!values.description) {
-          errors.description = requiredError;
-        }
-        if (!values.date) {
-          errors.date = requiredError;
-        }
-        return errors;
-      }}
-    >
-      {({ isValid, dirty, setFieldValue, setFieldTouched, }) => {
-          
-        return (
-          <Form className="form ui">
-            <SelectField
-              label="Type"
-              name="type"
-              options={entryOptions}
-            />
-            <Field
-            label= "Discharge: Date"
-            placeholder="YYYY-MM-DD"
-            name="discharge.date"
-            component={TextField}
-            />
-            <Field
-            label= "Discharge: Criteria"
-            placeholder="Criteria"
-            name="discharge.criteria"
-            component={TextField}
-            />
-            <Field
-              label="Description"
-              placeholder="Description"
-              name="description"
-              component={TextField}
-            />
-            <Field
-              label="Date"
-              placeholder="YYYY-MM-DD"
-              name="date"
-              component={TextField}
-            />
-            <Field
-              label="Specialist"
-              placeholder="Specialist"
-              name="specialist"
-              component={TextField}
-            />
-            <DiagnosisSelection
-            setFieldValue={setFieldValue}
-            setFieldTouched={setFieldTouched}
-            diagnoses={Object.values(diagnoses)}
-          />                <Grid>
-              <Grid.Column floated="left" width={5}>
-                <Button type="button" onClick={onCancel} color="red">
-                  Cancel
-                </Button>
-              </Grid.Column>
-              <Grid.Column floated="right" width={5}>
-                <Button
-                  type="submit"
-                  floated="right"
-                  color="green"
-                  disabled={!dirty || !isValid}
-                >
-                  Add
-                </Button>
-              </Grid.Column>
-            </Grid>
-          </Form>
-        );
-      }}
-    </Formik>
-  );
-};
+    const EntryForm = () => {
+        switch (entryType) {
+            case 'Hospital':
+                return <AddHospitalEntryForm
+                onSubmit = {onSubmit}
+                onCancel = {onCancel}
+                />
+                case 'OccupationalHealthcare':
+                    return <AddOccupationalHealthcareEntryForm
+                    onSubmit={onSubmit}
+                    onCancel={onCancel}
+                    />
+                    case 'HealthCheck':
+                        return <AddHealthCheckEntryForm
+                        onSubmit = {onSubmit}
+                        onCancel = {onCancel}
+                        />
+                    }         
+                } 
+                return (
+                <div>
+                    <EntryTypeRadioFilter
+                    entryType = {entryType}
+                    setEntryType = {setEntryType}
+                    />
+                    <br/>
+                    {EntryForm()}
+                    </div>
+                    );
+                };
 
 export default AddEntryForm;

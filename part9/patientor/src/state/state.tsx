@@ -45,10 +45,10 @@ export const setPatientList = (patientListFromApi: Patient[]): Action => {
   };
 };
 
-export const setViewedPatients = (patientsFromApi: Patient[]): Action => {
+export const setViewedPatients = (patientFromApi: Patient): Action => {
   return {
     type: "SET_VIEWED_PATIENT_LIST",
-    payload: patientsFromApi
+    payload: patientFromApi
   };
 };
 export const setDiagnoses = (diagnosesFromApi: Diagnosis[]): Action => {
