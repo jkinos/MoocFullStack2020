@@ -4,9 +4,8 @@
     <list default="true" id="7ffa6fcd-d5a9-4fb0-9fe4-2728d8f1d66f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/controllers/blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/controllers/blogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -44,7 +44,7 @@ const BlogList = ({blogs,user,showBanner}) => {
         }
         return(
         <Jumbotron id='banner' style={{backgroundColor: '#f8f9fa'}}>
-            <h1>Hello, Blog Lover!</h1>
+            <h1 id='bigHeading'>Hello, Blog Lover!</h1>
             <p>
                 <i>
                     This is the most awesome Blog App in the whole god damn world wide web, an application desinged for you to keep track of your favorite blogs!</i>

@@ -14,7 +14,7 @@ const Menu = ({addNew, anecdotes ,notification, setNotification,vote}) => {
     const match = useRouteMatch('/anecdotes/:id')
     const anecdote = match
         ? anecdotes.find(a => a.id === Number(match.params.id))
-        : null
+        : null;
 
     const padding = {
         paddingRight: 5

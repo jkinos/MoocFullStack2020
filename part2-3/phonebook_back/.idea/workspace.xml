@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d67cff-3abd-4f00-bfb8-17e6a8bf741c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../phonebook_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../phonebook_front/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part4/bloglist-backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/src/components/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../part8/library_backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -158,6 +157,8 @@
       <workItem from="1588952274388" duration="624000" />
       <workItem from="1588957138543" duration="2020000" />
       <workItem from="1589023903562" duration="147000" />
+      <workItem from="1592324955736" duration="1872000" />
+      <workItem from="1592481027953" duration="1226000" />
     </task>
     <servers />
   </component>
@@ -194,10 +195,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="171" key="#start/0.0.1536.864@0.0.1536.864" timestamp="1586789867510" />
-    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1588958591699">
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1592483018261">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1588958591699" />
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592483018261" />
     <state width="746" height="216" key="GridCell.Tab.0.bottom" timestamp="1588959159843">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

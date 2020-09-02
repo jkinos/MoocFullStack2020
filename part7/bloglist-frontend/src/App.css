@@ -2,12 +2,25 @@ body {
   background-image: url('piqsels.com-id-jrrjt.jpg');
   background-color: #6ccfd4;
   background-blend-mode: lighten;
+  /*background-color: #fff;
+  background-blend-mode: luminosity;*/
   background-repeat: round;
   background-attachment: fixed;
 }
 h1 {
   font-family: 'Abril Fatface', cursive;
 }
+/*@media screen and (min-width: 601px) {
+  #bigHeading {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #bigHeading {
+    font-size: 30px;
+  }
+}*/
+
 
 .container {
   background-color: rgb(255,255,255);

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac53c2d2-5fb0-4a4a-886c-b92b4569aa29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_back/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../part2-3/phonebook_front/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/blogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/blogs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part5/bloglist-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/components/BlogList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../part7/bloglist-frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
@@ -177,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -236,8 +240,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.start:test" />
         <item itemvalue="npm.test" />
         <item itemvalue="Jest.when there is initially one user at db.when there is initially some blogs saved.addition of a new blog.a valid blog can be added " />
@@ -274,7 +278,16 @@
       <workItem from="1587746670346" duration="36715000" />
       <workItem from="1589022529653" duration="12294000" />
       <workItem from="1589561231776" duration="119000" />
-      <workItem from="1590072959081" duration="30507000" />
+      <workItem from="1590072959081" duration="32725000" />
+      <workItem from="1590917043692" duration="1212000" />
+      <workItem from="1590947912923" duration="6474000" />
+      <workItem from="1591106652644" duration="2401000" />
+      <workItem from="1591249898270" duration="1260000" />
+      <workItem from="1591380848890" duration="3001000" />
+      <workItem from="1591864647332" duration="14000" />
+      <workItem from="1592242446075" duration="1677000" />
+      <workItem from="1592324849531" duration="2784000" />
+      <workItem from="1592481028774" duration="1206000" />
     </task>
     <servers />
   </component>
@@ -294,26 +307,26 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="620" y="324" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.864@0.0.1536.864" timestamp="1587594049874" />
-    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1590415010264">
+    <state x="549" y="190" key="FileChooserDialogImpl" timestamp="1592337671252">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1590415010264" />
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1590785637841">
+    <state x="549" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1592337671252" />
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1590926868629">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
-    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1590785637841">
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590926868629" />
+    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1590926868629">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
-    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1590785637841">
+    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590926868629" />
+    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1590926868629">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
-    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1590785637841">
+    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590926868629" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1590926868629">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590785637841" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590926868629" />
     <state width="1493" height="268" key="GridCell.Tab.1.bottom" timestamp="1587659802288">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -366,25 +379,13 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="249" y="9" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1587594813155" />
-    <state x="477" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1586857194607">
+    <state x="477" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1591444412951">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="477" y="259" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586857194607" />
+    <state x="477" y="259" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1591444412951" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1587652250863">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1587652250863" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/models/comment.js</url>
-          <line>19</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
